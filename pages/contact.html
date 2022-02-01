@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Blue Room Studio</title>
+    <link rel="shortcut icon" href="../content/ricklogo.png">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<!----------------MENU------------------------->
+    <header class="header">
+        <nav id="navFlex">
+
+            <div class="logo">
+                <a href="../index.html"><img src="../content/ricklogo.png" id="imgLogo"></a>
+            </div>
+
+            <ul class="ulMenu">
+                <li class="menuItem"><a href="../index.html">Home</a></li>
+                <li class="menuItem"><a href="proyects.html">Proyects</a></li>
+                <li class="menuItem"><a href="equipment.html">Studio</a></li>
+                <li class="menuItem"><a href="about_us.html">About Us</a></li>
+                <li class="menuItem"><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+<!-----------------CONTACT FORM------------------------>
+    <form class="formContact">
+        <h3>Contact Us</h3>
+
+        <fieldset id="fieldContact">
+            <legend>Contact Information</legend>
+
+        <div id="contactDiv">
+
+            <div id="fNameInput">
+                <label for="firstname">First Name</label>
+                    <input type="text" name="firstname">
+            </div>
+
+            <div id="lNameInput">
+                <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname">
+            </div>
+
+            <div id="emailInput">
+                <label for="email">Email</label>
+                    <input type="email" name="email">
+            </div>
+
+            <div id="phoneInput">
+                <label for="phone">Phone</label>
+                    <input type="phone" name="phone">
+            </div>
+
+            <div id="serviceInput">
+                <label for="service">Select Service</label>
+                    <select name="service">
+                        <option value="none">None</option>
+                        <option value="recording">Recording</option>
+                        <option value="mixing">Mixing</option>
+                        <option value="master">Mastering</option>
+                        <option value="rec-mix">Recording/Mixing</option>
+                        <option value="mix-mas">Mixing/Mastering</option>
+                        <option value="rec-mix-mas">Recording/Mixing/Mastering</option>
+                        <option value="other">Other service</option>
+                    </select>
+            </div>
+
+            <div id="descriptionInput">
+                <label for="aboutProyect" class="centerLabel">Brief description about your proyect:</label>
+                <textarea name="aboutProyect" rows="5"></textarea>
+            </div>
+
+            <div id="subInput">
+                <input type="checkbox" name="sub-email" value="1" id="subCheckbox">
+                <label for="sub-email" id="subLabel">Subscribe to our newsletter and recieve offers for your next proyect</label>
+            </div>
+
+            <div id="sendInput">
+                <a href="#" id="aSendButton">
+                    <input type="submit" value="Send" name="send" id="sendButton">
+                </a>
+            </div>
+
+        </div>
+        </fieldset>
+    </form>
+<!-----------------FOOTER------------------------>
+    <footer clas="footerFlex">    
+        <hr id="hrfooter">
+        &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
+    </footer></body>
+
+</body>
