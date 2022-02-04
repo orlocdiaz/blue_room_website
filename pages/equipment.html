@@ -3,6 +3,7 @@
 <head>
     <title>Blue Room Studio</title>
     <link rel="shortcut icon" href="../content/ricklogo.png">
+    <link rel="stylesheet" href="../estilos/bootstrap.css">
     <link rel="stylesheet" href="../estilos/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
@@ -13,24 +14,45 @@
 <body>
 <!----------------MENU------------------------->
     <header class="header">
-        <nav id="navFlex">
 
-            <div class="logo">
-                <a href="../index.html"><img src="../content/ricklogo.png" id="imgLogo"></a>
+        <nav class="navbar navbar-expand-lg" id="navFlex">
+          <div class="container-fluid">
+            <a class="navbar-brand aBrand" href="../index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
+                      <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                    </svg>
+                    Blue Room
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
+                <li class="nav-item, menuItem">
+                  <a class="nav-link active aMenuItem" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item, menuItem">
+                  <a class="nav-link active aMenuItem" aria-current="page" href="./proyects.html">Proyects</a>
+                </li>
+                <li class="nav-item, menuItem">
+                  <a class="nav-link active aMenuItem" aria-current="page" href="./equipment.html">Studio</a>
+                </li>
+                <li class="nav-item, menuItem">
+                  <a class="nav-link active aMenuItem" aria-current="page" href="./about_us.html">About Us</a>
+                </li>
+                <li class="nav-item, menuItem">
+                  <a class="nav-link active aMenuItem" aria-current="page" href="./contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
-
-            <ul class="ulMenu">
-                <li class="menuItem"><a href="../index.html">Home</a></li>
-                <li class="menuItem"><a href="proyects.html">Proyects</a></li>
-                <li class="menuItem"><a href="equipment.html">Studio</a></li>
-                <li class="menuItem"><a href="about_us.html">About Us</a></li>
-                <li class="menuItem"><a href="contact.html">Contact</a></li>
-            </ul>
+          </div>
         </nav>
     </header>
 <!----------------GEAR------------------------->
     <h3>The Studio</h3>
-    <section class="gear">
+<!--    <section class="gear">
 
     <div class="gearColumn" id="column1">
         <div class="gearDiv">
@@ -116,12 +138,111 @@
 
         <hr class="hrCol">
 
+    </div>    
+    </section> -->
+
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <h4 class="gearTitle">SM57</h4>
+          <img src="../content/sm57.png" class="gearImg">
+          <p class="gearDesc">The Shure SM57 is a low-impedance cardioid dynamic microphone made by Shure Incorporated and commonly used in live sound reinforcement and studio recording. It is one of the best-selling microphones in the world.</p>
+              </div>
+        <div class="col">
+          <h4 class="gearTitle">SM58</h4>
+          <img src="../content/sm58.png" class="gearImg">
+          <p class="gearDesc">The Shure SM58 is a unidirectional (cardioid) dynamic vocal microphone for professional vocal use in sound reinforcement and studio recording. A highly effective, built-in, spherical filter minimizes wind and breath “pop” noise. ... The SM58 has a tailored vocal response for a sound which is a world standard.</p>
+       </div>
+        <div class="col">
+          <h4 class="gearTitle">C214</h4>
+          <img src="../content/c314.png" class="gearImg">
+          <p class="gearDesc">The AKG C214 delivers AKG's classic large-diaphragm sound - and it's also capable of an impressive 143dB dynamic range for uncompressed, natural transients.</p>
+      
+         </div>
+      </div>
+      <div class="row align-items-start">
+        <div class="col">
+          <h4 class="gearTitle">Apollo 8p</h4>
+          <img src="../content/apollo8p.png" class="gearImg">
+          <p class="gearDesc">Loaded with cutting-edge digital conversion and eight Unison-equipped preamps and UAD-2 QUAD core processing, the Universal Audio 16-in/20-out Apollo 8p Thunderbolt audio interface demonstrates exactly why the Apollo line has been one of the most popular audio-interface series</p>
+      </div>
+        <div class="col">
+          <h4 class="gearTitle">Scarlett 2i2</h4>
+          <img src="../content/2i2.png" class="gearImg">
+          <p class="gearDesc">Scarlett’s best-selling interface – millions of musicians use 2i2 to write and record every day. Featuring natural sounding 3rd Gen mic preamps, and Air, emulating our original ISA preamps, 2i2 is getting musicians the most from their mics everywhere, all the time. </p>
+      </div>
+        <div class="col">
+          <h4 class="gearTitle">Pro Tools</h4>
+          <img src="../content/protools.png" class="gearImg">
+          <p class="gearDesc">Pro Tools is a digital audio workstation (DAW) developed and released by Avid Technology (formerly Digidesign)[1] for Microsoft Windows and macOS.[2] It is used for music creation and production, sound for picture (sound design, audio post-production and mixing)[3] and, more generally, sound recording, editing, and mastering processes.</p>
+              </div>
+      </div>
+      <div class="row align-items-start">
+        <div class="col">
+          <h4 class="gearTitle">Logic Pro X</h4>
+          <img src="../content/logic.png" class="gearImg">
+          <p class="gearDesc">Logic Pro is a full-featured music and audio app you can use for every aspect of music creation: recording, arranging, mixing, and more–everything from sketching your initial ideas to producing polished final mixes.</p>
+              </div>
+        <div class="col">
+          <h4 class="gearTitle">TubeMeister Deluxe 40</h4>
+            <img src="../content/gtramp.png" class="gearImg">
+            <p class="gearDesc">TubeMeister Deluxe is simply jaw dropping. Deluxe tones take you from pure, pristine cleans to an authentic brown sound and devastatingly powerful modern-day high gain, all influenced by the most beloved channels of our flagship TriAmp Mark 3.</p>
+        </div>
+        <div class="col">
+          <h4 class="gearTitle">A7X</h4>
+          <img src="../content/a7x.png" class="gearImg">
+          <p class="gearDesc">It is one of the most balanced and versatile speakers currently on the market. The X-ART tweeter produces detailed, uncompressed highs and upper mids without being tiring over long listening periods. Despite its compact housing, the bass response is powerful and precise.</p>
+              </div>
+      </div>
     </div>
 
-    </section>
+    <!-- <div class="accordion" id="accordionPanelsStayOpen">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div> -->
+
 <!----------------FOOTER------------------------->
     <footer clas="footerFlex">    
         <hr id="hrfooter">
         &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
     </footer></body>
+
+<!--Script Bootsrap-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </body>

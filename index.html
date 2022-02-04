@@ -3,6 +3,7 @@
 <head>
     <title>Blue Room Studio</title>
     <link rel="shortcut icon" href="./content/ricklogo.png">
+    <link rel="stylesheet" href="./estilos/bootstrap.css">
     <link rel="stylesheet" href="./estilos/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
@@ -13,21 +14,43 @@
 <body>
 <!----------------MENU------------------------->
     <header class="header">
-        <nav id="navFlex">
 
-            <div class="logo">
-                <a href="./index.html"><img src="content/ricklogo.png" id="imgLogo"></a>
-            </div>
-
-            <ul class="ulMenu">
-                <li class="menuItem"><a href="./index.html">Home</a></li>
-                <li class="menuItem"><a href="./pages/proyects.html">Proyects</a></li>
-                <li class="menuItem"><a href="./pages/equipment.html">Studio</a></li>
-                <li class="menuItem"><a href="./pages/about_us.html">About Us</a></li>
-                <li class="menuItem"><a href="#fieldContact">Contact</a></li>
+   <nav class="navbar navbar-expand-lg" id="navFlex">
+        <div class="container-fluid">
+            <a class="navbar-brand aBrand" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
+                    <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                  </svg>
+                  Blue Room
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
+              <li class="nav-item, menuItem">
+                <a class="nav-link active aMenuItem" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active aMenuItem" aria-current="page" href="./pages/proyects.html">Proyects</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active aMenuItem" aria-current="page" href="./pages/equipment.html">Studio</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active aMenuItem" aria-current="page" href="./pages/about_us.html">About Us</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active aMenuItem" aria-current="page" href="./pages/contact.html">Contact</a>
+              </li>
             </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
+
 <!----------------SLOGAN-DESC------------------------->
     <main class="mainFlex">
         <div id="slogan">
@@ -42,6 +65,53 @@
     </main>
 
     <hr class="hrRight">
+<!----------------CAROUSEL------------------------->
+<div class="carouselProyects">
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./content/luismi.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Luis Miguel</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./content/muse.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Muse</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./content/maluma.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Maluma</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./content/tigres.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Los Tigres del Norte</h4>
+        </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+
 <!----------------CONTACT FORM------------------------->
     <form class="formContact">
         <fieldset id="fieldContact">
@@ -108,6 +178,9 @@
         <hr id="hrfooter">
         &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 

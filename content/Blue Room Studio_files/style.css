@@ -16,11 +16,6 @@ body{
 a{
     color: inherit;
     text-decoration: none;
-    padding: 0;
-}
-
-header{
-    width: 100%;
 }
 
                         /* MENU */
@@ -31,8 +26,6 @@ header{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
-    z-index: 2;
 }
 
 #navFlex{
@@ -46,19 +39,12 @@ header{
     align-items: center;
 
     background-image: url(../content/tex_wav.png);
-    background-color: black;
-    background-size: 25%;
+    background-size: 20%;
     background-position: center;
     background-repeat: repeat-x;
 
     position: fixed;
-    z-index: 2;
-}
-
-.aBrand{
-    font-family: 'Righteous', cursive;
-    font-size:16px;
-    color: #b9247dd7;
+    z-index: 1;
 }
 
 .logo{
@@ -67,11 +53,6 @@ header{
 
 .logo :hover{
     opacity: 80%;
-}
-ul{
-    margin: 0;
-    padding: 1%;
-    background-color: black;
 }
 
 .ulMenu{
@@ -93,30 +74,19 @@ li{
 
     border-right: solid 0.5px #247eb9;
     
-
-}
-
-.aMenuItem{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     color: #b9247dd7;
     font-weight: bold;
     list-style: none;
-    box-sizing: content-box;
 }
 
 .menuItem :hover{
-    /* border-bottom: solid 0.5px #b9247dd7; */
+    border-bottom: solid 0.5px #b9247dd7;
 
+    font-size: 18px;
     color:#247eb9;
-
 }
-
-button{
-    border: none;
-}
-
-
 
                         /* INDEX */
 
@@ -150,7 +120,6 @@ h2{
     font-size:18vh;
     color: #b9247dd7;
     letter-spacing: 1px;
-    font-weight: bold;
 }
 
 #sloganTxt{

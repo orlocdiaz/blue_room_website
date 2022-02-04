@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://127.0.0.1:5500/blue_room_bootstrap/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script>
+    <title>Blue Room Studio</title>
+    <link rel="shortcut icon" href="./Blue Room Studio_files/ricklogo.png">
+    <link rel="stylesheet" href="./Blue Room Studio_files/bootstrap.css">
+    <link rel="stylesheet" href="./Blue Room Studio_files/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed="">
+<!----------------MENU------------------------->
+    <header class="header">
+        <nav id="navFlex">
+
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/blue_room_bootstrap/index.html"><img src="./Blue Room Studio_files/ricklogo.png" id="imgLogo"></a>
+            </div>
+
+            <ul class="ulMenu">
+                <li class="menuItem"><a href="http://127.0.0.1:5500/blue_room_bootstrap/index.html">Home</a></li>
+                <li class="menuItem"><a href="http://127.0.0.1:5500/blue_room_bootstrap/pages/proyects.html">Proyects</a></li>
+                <li class="menuItem"><a href="http://127.0.0.1:5500/blue_room_bootstrap/pages/equipment.html">Studio</a></li>
+                <li class="menuItem"><a href="http://127.0.0.1:5500/blue_room_bootstrap/pages/about_us.html">About Us</a></li>
+                <li class="menuItem"><a href="http://127.0.0.1:5500/blue_room_bootstrap/#fieldContact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navFlex">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
+                    <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                  </svg>
+                  Blue Room
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
+              <li class="nav-item, menuItem">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active" aria-current="page" href="./pages/proyects.html">Proyects</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active" aria-current="page" href="./pages/equipment.html">Studio</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active" aria-current="page" href="./pages/about_us.html">About Us</a>
+              </li>
+              <li class="nav-item, menuItem">
+                <a class="nav-link active" aria-current="page" href="./pages/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+<!----------------SLOGAN-DESC------------------------->
+    <main class="mainFlex">
+        <div id="slogan">
+            <h2 id="sloganTxt">We<br>make <span class="highlight" id="spanOne"></span><br>sound great<span class="highlight" id="spanTwo">!</span></h2>
+        </div>
+
+    <hr class="hrRight">
+
+        <div id="description">
+                <h2 class="descTxt"><span id="desc1">We are a</span><br>professional<br><span id="desc2">recording studio</span><br>capable of making<br>your <span id="desc3">sound</span><br><span id="biggerDesc">bigger</span><br>&amp; <span id="coolerDesc">cooler</span></h2>
+        </div>
+    </main>
+
+    <hr class="hrRight">
+<!----------------CAROUSEL------------------------->
+<div class="carouselProyects">
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Blue Room Studio_files/luismi.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Luis Miguel</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Blue Room Studio_files/muse.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Muse</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Blue Room Studio_files/maluma.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Maluma</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Blue Room Studio_files/tigres.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4 class="carouselH">Los Tigres del Norte</h4>
+        </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+
+<!----------------CONTACT FORM------------------------->
+    <form class="formContact">
+        <fieldset id="fieldContact">
+            <legend>Contact Information</legend>
+
+        <div id="contactDiv">
+
+                <div id="fNameInput">
+                    <label for="firstname">First Name</label>
+                        <input type="text" name="firstname">
+                </div>
+
+                <div id="lNameInput">
+                    <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname">
+                </div>
+
+                <div id="emailInput">
+                    <label for="email">Email</label>
+                        <input type="email" name="email">
+                </div>
+
+                <div id="phoneInput">
+                    <label for="phone">Phone</label>
+                        <input type="phone" name="phone">
+                </div>
+
+
+            <div id="serviceInput">
+                <label for="service">Select Service</label>
+                    <select name="service">
+                        <option value="none">None</option>
+                        <option value="recording">Recording</option>
+                        <option value="mixing">Mixing</option>
+                        <option value="master">Mastering</option>
+                        <option value="rec-mix">Recording/Mixing</option>
+                        <option value="mix-mas">Mixing/Mastering</option>
+                        <option value="rec-mix-mas">Recording/Mixing/Mastering</option>
+                        <option value="other">Other service</option>
+                    </select>
+            </div>
+
+            <div id="descriptionInput">
+                <label for="aboutProyect" class="centerLabel">Brief description about your proyect:</label>
+                <textarea name="aboutProyect" rows="5"></textarea>
+            </div>
+
+            <div id="subInput">
+                <input type="checkbox" name="sub-email" value="1" id="subCheckbox">
+                <label for="sub-email" id="subLabel">Subscribe to our newsletter and recieve offers for your next proyect</label>
+            </div>
+
+            <div id="sendInput">
+                <a href="http://127.0.0.1:5500/blue_room_bootstrap/#" id="aSendButton">
+                    <input type="submit" value="Send" name="send" id="sendButton">
+                </a>
+            </div>
+
+        </div>
+        </fieldset>
+    </form>
+<!----------------FOOTER------------------------->
+    <footer clas="footerFlex">   
+        <hr id="hrfooter">
+        ©2021 - Blue Room Studio - Designed &amp; Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
+    </footer>
+
+    <script src="./Blue Room Studio_files/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="./Blue Room Studio_files/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
