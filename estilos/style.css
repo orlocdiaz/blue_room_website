@@ -11,6 +11,7 @@
 
 body{
     background-color: black;
+    min-height: 100vh;
 }
 
 a{
@@ -563,14 +564,37 @@ h3{
 }
 
 .proyects{
-    margin: 0;
-    height: 80vh;
+    margin: 2% 0;
     width: 100%;
+    min-height: 90vh;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+}
+
+.card{
+    background-color: #b9247dd7;;
+}
+
+#sideProyectColumn{
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+#sideProyectContainer{
+    padding: 0;
+}
+
+#sideProyect{
+    padding: 0;
+}
+
+#sideProyectImg{
+    border-radius: 10px;
 }
 
 .aProyects{
@@ -632,6 +656,7 @@ p{
 
     font-family: 'Quicksand', sans-serif;
     color: #247eb9;
+    text-shadow: 0 0 15px black;
     font-weight: bold;
 }
 
@@ -787,7 +812,7 @@ footer{
 
 /* TABLET */
 
-@media (min-width: 481px) and (max-width: 1023px){
+@media (min-width: 481px) and (max-width: 1024px){
 
 /*------NAV-----*/
 
@@ -863,13 +888,27 @@ h3{
 }
 
 .proyects{
-    height: auto;
 
     flex-flow: column;
 }
 
 .aProyects{
     width: 80%;
+}
+
+#mainProyectCol{
+    padding: 0;
+    width: 100%;
+}
+
+#sideProyectColumn{
+    flex-flow: row;
+    width: 100%;
+    padding: 1%;
+}
+
+#sideProyectContainer{
+    width: 40%;
 }
 
 
@@ -1141,6 +1180,21 @@ h3{
     width: 90%;
 }
 
+#mainProyectCol{
+    padding: 0;
+    width: 100%;
+}
+
+#sideProyectColumn{
+    width: 100%;
+    padding: 1%;
+}
+
+#sideProyectContainer{
+    padding: 2%;
+    width: 80%;
+}
+
 /*------STUDIO-----*/
 
 h4{
@@ -1169,6 +1223,7 @@ p{
 
 footer{
     font-size: 11px;
+    
 }
 
 }
