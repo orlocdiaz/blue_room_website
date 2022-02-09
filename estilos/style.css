@@ -333,22 +333,33 @@ hr{
     85% { text-shadow: -1px -1px 1px #247db9, -3px -3px 1px #b9247d, -5px -5px 1px #247db9, -7px -7px 1px #b9247d, -9px -9px 1px #247db9, -11px -11px 1px #b9247d, -13px -13px 1px #247db9, -15px -15px 15px #b9247d8e;}
 }
 
-.carouselProyects{
-    /* padding: 0 10%; */
-    background-image: linear-gradient(#247db941, black 100%, #b9247d70),
-    linear-gradient(90deg, black 10%, #b9247d70);
-    
+#divCarouselCaption{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    font-size: 2px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, 0.596);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
 }
 
-.carouselProyects .carousel img{
-    object-fit: cover;
-    object-position: top;
-    height: 85vh;
+.carouselIndex:hover #divCarouselCaption{
+    opacity: 1;
 }
 
-.carouselH{
-    font-size: 45px;
-    color: #b9247d;
+#carouselCaption{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
 }
 
 
@@ -547,7 +558,6 @@ textarea{
                         /* PROYECTS */
 
 #bodyProyects{
-    background-image: url(../content/bassbck.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -564,8 +574,8 @@ h3{
 }
 
 .proyects{
-    margin: 2% 0;
-    width: 100%;
+    margin: 2%;
+    width: 96%;
     min-height: 90vh;
 
     display: flex;
@@ -574,19 +584,40 @@ h3{
     align-items: center;
 }
 
+.carouselProyects{
+    /* padding: 0 10%; */
+    background-image: linear-gradient(#247db941, black 100%, #b9247d70),
+    linear-gradient(90deg, black 10%, #b9247d70);
+    
+}
+
+.carouselProyects .carousel img{
+    object-fit: cover;
+    object-position: top;
+    height: 85vh;
+}
+
+.carouselH{
+    font-size: 45px;
+    color: #b9247d;
+}
+
 .card{
-    background-color: #b9247dd7;;
+    margin: 2%;
+    padding: 2%;
+    border: none;
+
+    background-image: linear-gradient(146deg, #b9247dd7, #247db9, black 40%);
 }
 
 #sideProyectColumn{
-
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
 }
 
 #sideProyectContainer{
-    padding: 0;
+    padding: 5%;
 }
 
 #sideProyect{
@@ -606,7 +637,7 @@ h3{
     height: auto;
     width: 100%;
 
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 #proyectOne{
@@ -643,6 +674,15 @@ h4{
     color: #b9247dd7;
 }
 
+.gear{
+    min-height: 80vh;
+}
+
+#subTitle{
+    text-align: center;
+    color: #247eb9;
+}
+
 .accordion-button{
     margin: 5px;
 
@@ -658,6 +698,30 @@ p{
     color: #247eb9;
     text-shadow: 0 0 15px black;
     font-weight: bold;
+}
+
+strong{
+    color: #b9247dd7;
+    text-decoration: double underline #247eb9;
+}
+
+.accordion-body{
+    margin: 0;
+
+    text-align: center;
+
+    font-family: 'Quicksand', sans-serif;
+    color: #247eb9;
+    font-weight: bold;
+}
+
+.accordion-item{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-button{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .gear{
@@ -881,6 +945,10 @@ h2{
     -8px -8px 15px #b9247d;
 }
 
+#carouselCaption{
+    font-size: 80px;
+}
+
     /*-----PROYECTS-----*/
 
 h3{
@@ -993,6 +1061,10 @@ h4{
     font-size: 24px;
 }
 
+.accordion-body{
+    margin: 0;
+}
+
 p{
     font-size: 14px;
 }
@@ -1081,6 +1153,11 @@ h2{
     -3px -3px 0.5px #247db9, 
     -4px -4px 15px #b9247d;
 }
+
+#carouselCaption{
+    font-size: 35px;
+}
+
 
 /*-----CONTACT-----*/
 
@@ -1203,6 +1280,10 @@ h4{
 
 .gear{
     flex-flow: column;
+}
+
+.gearDiv{
+    margin: 0;
 }
 
 .gearColumn{

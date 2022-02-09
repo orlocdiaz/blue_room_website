@@ -4612,7 +4612,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: none;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
