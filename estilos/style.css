@@ -1254,7 +1254,13 @@ h3{
 }
 
 .card-body{
-    padding: 3%;
+    padding: 1%;
+}
+
+.card-text{
+    margin: 0;
+
+    font-size: 10px;
 }
 
 .aProyects{
