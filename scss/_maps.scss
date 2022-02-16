@@ -1,0 +1,61 @@
+//MAP//
+
+$colors: (
+    pink: $pink,
+    blue: $blue
+);
+
+
+@each $name-color, $color in $colors {
+    .h-#{$name-color}{
+        color:$color;
+    }
+}
+
+$font-sizing: (
+    biggest: 18vh,
+    big: 14vh,
+    pageTitle: 6vh,
+    subtitle: 4vh,
+    itemTitle: 3vh,
+    normal: 16px,
+    brand: 22px,
+    legend: 30px,
+    input: 18px
+);
+
+@each $name-size, $size in $font-sizing {
+    .size-#{$name-size}{
+        font-size:$size;
+    }
+}
+
+
+
+$headings: (
+    slogan: 18vh,
+    description: 14vh,
+    pageTitle: 6vh,
+    subtitle: 4vh,
+    itemTitle: 3vh
+);
+
+@each $name-heading, $size in $headings {
+    .h-#{$name-heading}{
+        font-size: $size;
+    }
+}
+
+$headings: (
+    slogan: $pink,
+    description: $pink,
+    pageTitle: $pink,
+    subtitle: $blue,
+    itemTitle: $pink
+);
+
+@each $name-heading, $h-color in $headings {
+    .h-#{$name-heading}{
+        color: $h-color;
+    }
+}

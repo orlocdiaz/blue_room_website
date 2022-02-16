@@ -1,0 +1,14 @@
+$mainFont: 'Righteous', cursive;
+$secondaryFont: 'Quicksand', sans-serif;
+$sFontSize1: 22px;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $mainFont;
+}
+
+p, a, li {
+    font-family: $secondaryFont;
+}
+
+
+

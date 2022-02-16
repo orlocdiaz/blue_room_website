@@ -4,7 +4,7 @@
     <title>Blue Room Studio</title>
     <link rel="shortcut icon" href="./content/ricklogo.png">
     <link rel="stylesheet" href="./estilos/bootstrap.css">
-    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
     </style>
@@ -17,7 +17,7 @@
 
    <nav class="navbar navbar-expand-lg" id="navFlex">
         <div class="container-fluid">
-            <a class="navbar-brand aBrand" href="index.html">
+            <a class="navbar-brand aBrand size-brand" href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
                     <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
                   </svg>
@@ -30,19 +30,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
-              <li class="nav-item, menuItem">
+              <li class="size-normal, nav-item, menuItem">
                 <a class="nav-link active aMenuItem" aria-current="page" href="./index.html">Home</a>
               </li>
-              <li class="nav-item, menuItem">
+              <li class="size-normal, nav-item, menuItem">
                 <a class="nav-link active aMenuItem" aria-current="page" href="./pages/proyects.html">Proyects</a>
               </li>
-              <li class="nav-item, menuItem">
+              <li class="size-normal, nav-item, menuItem">
                 <a class="nav-link active aMenuItem" aria-current="page" href="./pages/equipment.html">Studio</a>
               </li>
-              <li class="nav-item, menuItem">
+              <li class="size-normal, nav-item, menuItem">
                 <a class="nav-link active aMenuItem" aria-current="page" href="./pages/about_us.html">About Us</a>
               </li>
-              <li class="nav-item, menuItem">
+              <li class="size-normal, nav-item, menuItem">
                 <a class="nav-link active aMenuItem" aria-current="page" href="./pages/contact.html">Contact</a>
               </li>
             </ul>
@@ -54,13 +54,13 @@
 <!----------------SLOGAN-DESC------------------------->
     <main class="mainFlex">
         <div id="slogan">
-            <h2 id="sloganTxt">We<br>make <span class="highlight" id="spanOne"></span><br>sound great<span class="highlight" id="spanTwo">!</span></h2>
+            <h1 class="h-slogan" id="sloganTxt">We<br>make <span id="spanOne"></span><br>sound great<span class="highlight" id="spanTwo">!</span></h1>
         </div>
 
     <hr class="hrRight">
 
         <div id="description">
-                <h2 class="descTxt"><span id="desc1">We are a</span><br>professional<br><span id="desc2">recording studio</span><br>capable of making<br>your <span id="desc3">sound</span><br><span id="biggerDesc">bigger</span><br>& <span id="coolerDesc">cooler</span></h2>
+                <h2 class="h-description descTxt"><span id="desc1">We are a</span><br>professional<br><span id="desc2">recording studio</span><br>capable of making<br>your <span id="desc3">sound</span><br><span id="biggerDesc">bigger</span><br>& <span id="coolerDesc">cooler</span></h2>
         </div>
     </main>
 
@@ -72,19 +72,19 @@
     <div class="carousel-item active carouselIndex">
       <img src="./content/claband.png" class="card-img-top" alt="...">
       <div id="divCarouselCaption">
-        <h2 id="carouselCaption">Band Recording</h2>
+        <h2 class="h-description"id="carouselCaption">Band Recording</h2>
       </div>
     </div>
     <div class="carousel-item carouselIndex">
       <img src="./content/voicerec.jpg" class="card-img-top" alt="...">
       <div id="divCarouselCaption">
-        <h2 id="carouselCaption">Voice Recording</h2>
+        <h2 class="h-description" id="carouselCaption">Voice Recording</h2>
       </div>
     </div>
     <div class="carousel-item carouselIndex">
       <img src="./content/drums.jpg" class="card-img-top" alt="...">
       <div id="divCarouselCaption">
-        <h2 id="carouselCaption">Instrument Recording</h2>
+        <h2 class="h-description" id="carouselCaption">Instrument Recording</h2>
       </div>
     </div>
   </div>
@@ -98,6 +98,7 @@
   </button>
 </div>
 
+<hr>
 <!----------------CONTACT FORM------------------------->
     <form class="formContact">
         <fieldset id="fieldContact">

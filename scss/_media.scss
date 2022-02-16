@@ -1,0 +1,379 @@
+@import "maps";
+@import "mixins";
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1024px){
+    
+    /*-----INDEX-----*/
+ 
+.mainFlex{
+    #slogan{
+        background-repeat: repeat-y;
+    
+        justify-content: center;
+    
+        h1{    
+            font-size: 13vh;
+            box-sizing: border-box;
+        }
+    }
+    #description{
+        .h-description{
+            font-size: 10vh;
+
+            #desc2{
+                text-shadow:  
+                3px 3px 1px #b9247dd7;
+            }
+            
+            #desc3{
+                border-radius: 12px;
+            }
+                
+            #biggerDesc{
+                font-size: 20vh;
+            }
+            
+            #coolerDesc{
+                font-size: 12vh;
+
+                animation: coolerAnim 5s infinite;
+            }
+            
+            @keyframes coolerAnim{
+                5% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink;}
+                10% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue;}
+                15% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink;}
+                20% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue;}
+                25% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink;}
+                30% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue;}
+                35% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $solidPink;}
+                40% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+                45% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $solidPink;}
+                50% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+                85% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+            }
+        }
+    }
+}
+
+#divCarouselCaption {
+    padding: 1% 10%;
+
+    #carouselCaption{
+        padding: 1%;
+        font-size: 80px;
+    }
+}
+
+/*-----CONTACT-----*/
+.formContact{
+    #fieldContact{
+        font-size: 16px;
+
+        legend{
+            font-size: 24px;
+        }
+    
+        #contactDiv{
+            display: grid;
+            grid-template-areas:
+            "fName"
+            "lName"
+            "email"
+            "phone"
+            "service"
+            "description"
+            "subscription"
+            "send"
+            ;
+
+            label{
+                padding: 1% 5%;
+            }
+            
+            input{
+                margin: 5px 5%;
+                padding: 0 3px;
+                height: 35px;
+            
+                font-size: 14px;
+            }
+            #serviceInput{
+                select{
+                    padding: 0 3px;
+                    height: 30px;
+                    width: 80%;
+
+                    font-size: 11px;
+                }
+            }
+
+            #descriptionInput{
+                textarea{
+                    padding: 5px;
+                    height: 80px;
+                    width: 80%;
+                    font-size: 14px;
+                }
+            }
+
+            #subInput{
+                margin: 2% 10%;
+
+                #subLabel{
+                    font-size: 12px;
+                }
+            }
+            #sendInput{
+                #sendButton{
+                    margin: 10px;
+                    padding: 5px;
+                    width: 180px;
+                    height: 40px;
+                
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 480px){
+
+    /*------NAV-----*/
+ 
+header #navFlex {
+    height: 6vh;
+    position: static;
+    
+    .aBrand {
+        font-size: 20px;
+    }
+
+    .menuItem{
+        font-size: 12px;
+    }    
+}    
+ 
+    /*-----INDEX-----*/
+
+.mainFlex{
+    #slogan{
+        justify-content: center;
+        height: 90vh;
+        background-repeat: repeat-y;
+
+        h1{    
+            font-size: 10vh;
+        
+            box-sizing: border-box;
+        }
+
+        #sloganTxt{
+
+            .highlight{
+                color: $transparentBlue ;
+                text-shadow:  3px 3px 0px $pink;
+            }
+
+            #spanOne::before {
+                animation: wordOne 10s linear;
+                content: "";
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+            
+                @keyframes wordOne {
+                    0% { content: "it"; 
+                        color: $transparent;
+                        text-shadow:  3px 3px 0px $transparent; }
+                    10% { color: $transparentBlue ;
+                        text-shadow:  3px 3px 0px $pink; }
+                    20% { content: "it";
+                        color: $transparentBlue ;
+                        text-shadow:  3px 3px 0px $pink; }
+                    30% { color: $transparent;
+                        text-shadow:  3px 3px 0px $transparent; }
+                    40% { content: "proyects"; 
+                        color: $transparentBlue ;
+                        text-shadow:  3px 3px 0px $pink; }
+                    50% { color: $transparent ;
+                        text-shadow:  3px 3px 0px $transparent; }
+                    60% { content: "ideas";
+                        color: $transparentBlue ;
+                        text-shadow:  3px 3px 0px $pink; }
+                    70% { color: $transparent;
+                        text-shadow:  3px 3px 0px $transparent; }
+                    80% { content: "everything";
+                        color: $transparentBlue;
+                        text-shadow:  3px 3px 0px $pink; }
+                    90% { color: $transparent;
+                        text-shadow:  3px 3px 0px $transparent; }
+                    100% { content: "you";
+                        color: $transparentBlue;
+                        text-shadow:  3px 3px 0px $pink; }
+                }
+            }
+        }
+    }  
+
+    #description{
+        height: 100vh;
+    
+        align-items: center;
+
+        .descTxt{
+            font-size: 7vh;
+        
+            #desc2{
+                text-shadow:  
+                2px 2px 2px #b9247dd7;
+            }
+            
+            #desc3{
+                border-radius: 5px;
+            }
+                
+            #biggerDesc{
+                font-size: 13vh;
+            }
+
+            #coolerDesc{
+                font-size: 8vh;
+
+                animation: coolerAnim 5s infinite;
+            }
+            
+            @keyframes coolerAnim{
+                5% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink;}
+                10% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue;}
+                15% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink;}
+                20% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue;}
+                25% {text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink;}
+                30% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue;}
+                35% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $solidPink;}
+                40% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+                45% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $solidPink;}
+                50% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+                85% { text-shadow: -1px -1px 1px $blue, -2px -2px 1px $solidPink, -3px -3px 1px $blue, -4px -4px 1px $solidPink, -5px -5px 1px $blue, -6px -6px 1px $solidPink, -7px -7px 1px $blue, -8px -8px 8px $mediumTransparentPink;}
+            }
+        }
+    }
+}
+    
+#divCarouselCaption {
+    padding: 1% 10%;
+
+    #carouselCaption{
+        padding: 1%;
+        font-size: 40px;
+    }
+}
+    
+    
+    /*-----CONTACT-----*/
+    
+.formContact{
+    #fieldContact{
+        font-size: 16px;
+
+        legend{
+            margin: 0 15px;
+            font-size: 24px;
+        }
+    
+        #contactDiv{
+            display: grid;
+            grid-template-areas:
+            "fName"
+            "lName"
+            "email"
+            "phone"
+            "service"
+            "description"
+            "subscription"
+            "send"
+            ;
+
+            label{
+                padding: 3px 15px;
+                text-align: center;
+            }
+            
+            input{
+                margin: 8px;
+                padding: 5px;
+                height: 30px;
+                width: 80%;
+            
+                font-size: 14px;
+            
+                align-self: center;
+            }
+            #serviceInput{
+                select{
+                    padding: 0 5px;
+                    width: 80%;
+                    height: 30px;
+
+                    font-size: 14px;
+                }
+            }
+
+            #descriptionInput{
+                textarea{
+                    margin: 8px;
+                    height: 80px;
+                    width: 80%;
+
+                    font-size: 14px;
+                }
+            }
+
+            #subInput{
+                margin: 8px 10%;
+
+                #subLabel{
+                    padding: 0 10px;
+
+                    font-size: 12px;
+                    text-align: center;
+                }
+
+                #subCheckbox{
+                    width: 12px;
+                }
+            }
+
+            #sendInput{
+                justify-content: center;
+
+                #sendButton{
+                    margin: 10px;
+                    padding: 5px;
+                    height: 50px;
+                    width: 150px;
+
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+}
