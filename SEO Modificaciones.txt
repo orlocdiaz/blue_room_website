@@ -1,0 +1,5 @@
+En el proyecto reescribí los encabezados (h1, h2, etc.) para que tuvieran un orden con mejor sentido.
+Tambien cambie el <title> de todas las paginas para que cambiara el nombre segun la página en la que se encontraba.
+Agregue meta keywords y meta description a todas las páginas.
+Creo que mi esctructura del proyecto no estaba tan mal asi que no modifique eso pero como siemopre, estoy abierto a cualquier corrección.
+Gracias!
