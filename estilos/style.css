@@ -553,6 +553,12 @@ h3{
     text-align: center;
 }
 
+h5{
+    font-family: 'Righteous', cursive;
+    color: #b9247dd7;
+    font-size: 4vh;
+}
+
 .proyects{
     margin: 2%;
     width: 96%;
