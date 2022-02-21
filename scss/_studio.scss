@@ -1,0 +1,146 @@
+.gear{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    #column1{
+        animation: column1 .5s ;
+        animation-timing-function: cubic-bezier(0,.16,.57,1.4);
+    }
+    
+    @keyframes column1{
+        0%{ transform: translateY(-300vh);}
+    }
+    
+    #column2{
+        animation: column2 1s ;
+        animation-timing-function: cubic-bezier(0,.16,.57,1.4);
+    }
+    
+    @keyframes column2{
+        0%{ transform: translateY(-300vh);}
+    }
+    
+    #column3{
+        animation: column3 1.5s ;
+        animation-timing-function: cubic-bezier(0,.16,.57,1.4);
+    }
+    
+    @keyframes column3{
+        0%{ transform: translateY(-300vh);}
+    }
+
+    .gearColumn{
+        width: 30%;
+    
+        display: flex;
+        flex-flow: column wrap;
+
+        .gearDiv{
+            margin: 5px;
+            padding: 5px;
+            width: 100%;
+        
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        
+            animation: gearAnim 1s;
+
+            @keyframes gearAnim{
+                0% {opacity: 0%;}
+                100% {opacity: 100%;}
+            }
+
+            .accordion-item{
+                background-color: rgba(0, 0, 0, 0);
+            
+
+                .accordion-button{
+                    margin: 0;
+                    background-color: rgba(0, 0, 0, 0);
+                
+                    .gearImg{
+                        height: auto;
+                        width: 95%;
+                    }
+                }
+
+                .accordion-button:hover {
+                    transition: .2s ease;
+                    z-index: 1;
+                    transform: scale(1.05, 1.05);
+                }
+
+                .accordion-button:not(.collapsed){
+                    h5{
+                        color: $blue;
+                    }
+                }
+
+                .accordion-body{
+                    margin: 0;
+                    width: 95%;
+                
+                    text-align: center;
+                
+                    font-family: 'Quicksand', sans-serif;
+                    color: #247eb9;
+                    font-weight: bold;
+                
+                    strong{
+                        color: #b9247dd7;
+                        text-decoration: double underline #247eb9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----TABLET-----*/
+
+@media (min-width: 481px) and (max-width: 1024px){
+    
+    .accordion-body{
+        font-size: 14px;
+    }
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 480px){
+
+h3{
+    font-size: 30px !important;
+    margin: 5%;
+}
+
+h4{
+    font-size: 20px !important;
+}
+
+.gear{
+    flex-flow: column;
+
+    .gearColumn{
+        width: 100%;
+
+        .gearDiv{
+            margin: 0;
+
+            .accordion-item{
+                .accordion-button{
+                    .gearImg{
+                        width: 80%;
+                    }
+                }
+            
+                .accordion-body{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+}

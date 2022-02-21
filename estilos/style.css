@@ -627,6 +627,7 @@ h4{
     font-family: 'Righteous', cursive;
     font-size: 4vh;
     color: #b9247dd7;
+    text-shadow: 1px 1px 2px #247eb9;
 }
 
 .gear{
@@ -639,12 +640,22 @@ h4{
 }
 
 .accordion-button{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-button{
     margin: 5px;
 
     font-family: 'Righteous', cursive;
     font-size: 30px;
     color: #b9247dd7;
 }
+
+.accordion-button:hover {
+    z-index: 1;
+    transform: scale(1.05, 1.05);
+  }
 
 p{
     margin: 10px;
@@ -674,10 +685,7 @@ strong{
     background-color: rgba(0, 0, 0, 0);
 }
 
-.accordion-button{
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0);
-}
+
 
 .gear{
     display: flex;

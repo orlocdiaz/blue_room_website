@@ -4669,10 +4669,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.accordion-button:hover {
-  z-index: 1;
-  transform: scale(1.1, 1.1);
-}
+
 .accordion-button:focus {
   z-index: 1;
   border-color: #86b7fe;
