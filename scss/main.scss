@@ -208,6 +208,11 @@ footer {
     text-decoration-color: $pink;
   }
 
+  #footerLinkIcon{
+    width: 40px;
+    height: 40px;
+  }
+
   #footerLinkIcon:hover {
     transition: .5s;
     color: $blue;
@@ -232,6 +237,11 @@ footer {
   footer {
     font-size: 12px;
     font-weight: bolder;
+
+    #footerLinkIcon{
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -254,7 +264,30 @@ footer {
   }
 
   footer {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bolder;
+
+    h6{
+      font-size: 12px;
+    }
+
+    .footerIcons{
+
+      display: flex;
+      flex-flow: column;
+    }
+
+    #footerLinkIcon{
+      width: 20px;
+      height: 20px;
+    }
+
+    .footerInfo{
+      font-size: 6px;
+    }
+
+    .footerDev{
+      font-size: 6px;
+    }
   }
 }

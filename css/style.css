@@ -1245,6 +1245,9 @@ footer {
   footer #footerLink:hover {
     text-decoration: underline;
     text-decoration-color: #b9247dd7; }
+  footer #footerLinkIcon {
+    width: 40px;
+    height: 40px; }
   footer #footerLinkIcon:hover {
     transition: .5s;
     color: #247eb9; }
@@ -1261,7 +1264,10 @@ footer {
 @media (min-width: 481px) and (max-width: 1024px) {
   footer {
     font-size: 12px;
-    font-weight: bolder; } }
+    font-weight: bolder; }
+    footer #footerLinkIcon {
+      width: 30px;
+      height: 30px; } }
 
 /* SMARTPHONE */
 @media (max-width: 480px) {
@@ -1274,5 +1280,17 @@ footer {
     header #navFlex .menuItem {
       font-size: 12px; }
   footer {
-    font-size: 10px;
-    font-weight: bolder; } }
+    font-size: 8px;
+    font-weight: bolder; }
+    footer h6 {
+      font-size: 12px; }
+    footer .footerIcons {
+      display: flex;
+      flex-flow: column; }
+    footer #footerLinkIcon {
+      width: 20px;
+      height: 20px; }
+    footer .footerInfo {
+      font-size: 6px; }
+    footer .footerDev {
+      font-size: 6px; } }
