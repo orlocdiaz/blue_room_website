@@ -1,29 +1,5 @@
 //MAP//
 
-$colors: (
-  pink: $pink,
-  blue: $blue,
-);
-
-@each $name-color, $color in $colors {
-  .h-#{$name-color} {
-    color: $color;
-  }
-}
-
-$font-sizing: (
-  normal: 16px,
-  brand: 22px,
-  legend: 30px,
-  input: 18px,
-);
-
-@each $name-size, $size in $font-sizing {
-  .size-#{$name-size} {
-    font-size: $size;
-  }
-}
-
 $headings: (
   slogan: 18vh,
   description: 14vh,
@@ -67,8 +43,8 @@ $headings: (
 }
 
 $headings: (
-  pageTitle: 3px 3px 5px #b9247d69,
-  subtitle: 1px 1px 2px #247eb9,
+  pageTitle: 3px 3px 5px $veryTransparentPink,
+  subtitle: 1px 1px 2px $blue,
 );
 
 @each $name-heading, $h-shadow in $headings {

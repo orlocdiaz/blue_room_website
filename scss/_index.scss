@@ -329,8 +329,6 @@
     padding: 3%;
     display: flex;
     align-items: center;
-    text-align: center;
-    font-size: 14vh;
 
     border: solid 10px $blue;
     border-radius: 20px;
@@ -339,9 +337,8 @@
 
 /* CONTACT INDEX */
 
-#contactIndex {
   .formContact {
-    padding: 2%;
+    padding: 2% 10%;
 
     background: linear-gradient(
       45deg,
@@ -556,7 +553,6 @@
       }
     }
   }
-}
 
 /* TABLET */
 

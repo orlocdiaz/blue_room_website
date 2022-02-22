@@ -11,24 +11,6 @@ a,
 li {
   font-family: "Quicksand", sans-serif; }
 
-.h-pink {
-  color: #b9247dd7; }
-
-.h-blue {
-  color: #247eb9; }
-
-.size-normal {
-  font-size: 16px; }
-
-.size-brand {
-  font-size: 22px; }
-
-.size-legend {
-  font-size: 30px; }
-
-.size-input {
-  font-size: 18px; }
-
 .h-slogan {
   font-size: 18vh; }
 
@@ -75,7 +57,7 @@ li {
   font-family: "Righteous", cursive; }
 
 .h-pageTitle {
-  text-shadow: 3px 3px 5px #b9247d69; }
+  text-shadow: 3px 3px 5px #b9247d71; }
 
 .h-subtitle {
   text-shadow: 1px 1px 2px #247eb9; }
@@ -404,14 +386,12 @@ header {
     padding: 3%;
     display: flex;
     align-items: center;
-    text-align: center;
-    font-size: 14vh;
     border: solid 10px #247eb9;
     border-radius: 20px; }
 
 /* CONTACT INDEX */
-#contactIndex .formContact {
-  padding: 2%;
+.formContact {
+  padding: 2% 10%;
   background: linear-gradient(45deg, #b94289a2, #247db991, #b94289a2, #247db991);
   background-size: 400% 100%;
   height: 100%;
@@ -424,7 +404,7 @@ header {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-  #contactIndex .formContact #fieldContact {
+  .formContact #fieldContact {
     background-color: #000000d5;
     border-color: #247eb9;
     border-radius: 20px;
@@ -432,38 +412,38 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: #b9247dd7; }
-    #contactIndex .formContact #fieldContact input:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
-    #contactIndex .formContact #fieldContact input:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact input:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact textarea:-webkit-autofill,
-    #contactIndex .formContact #fieldContact textarea:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact textarea:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact select:-webkit-autofill,
-    #contactIndex .formContact #fieldContact select:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact select:-webkit-autofill:focus {
+    .formContact #fieldContact input:-webkit-autofill, .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
+    .formContact #fieldContact input:-webkit-autofill:hover,
+    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
+    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
+    .formContact #fieldContact input:-webkit-autofill:focus,
+    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
+    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
+    .formContact #fieldContact textarea:-webkit-autofill,
+    .formContact #fieldContact textarea:-webkit-autofill:hover,
+    .formContact #fieldContact textarea:-webkit-autofill:focus,
+    .formContact #fieldContact select:-webkit-autofill,
+    .formContact #fieldContact select:-webkit-autofill:hover,
+    .formContact #fieldContact select:-webkit-autofill:focus {
       -webkit-text-fill-color: #b9247dd7;
       box-shadow: 0 0 0px 1000px black inset; }
-    #contactIndex .formContact #fieldContact input:focus, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:focus, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:focus,
-    #contactIndex .formContact #fieldContact textarea:focus,
-    #contactIndex .formContact #fieldContact select:focus {
+    .formContact #fieldContact input:focus, .formContact #fieldContact #contactDiv #serviceInput select:focus, .formContact #fieldContact #contactDiv #descriptionInput textarea:focus,
+    .formContact #fieldContact textarea:focus,
+    .formContact #fieldContact select:focus {
       outline: 3px solid #b9247d71; }
-    #contactIndex .formContact #fieldContact legend {
+    .formContact #fieldContact legend {
       padding: 5px;
       margin: 0 50px;
       font-family: "Righteous", cursive;
       font-size: 30px;
       text-align: left;
       color: #247eb9; }
-    #contactIndex .formContact #fieldContact #contactDiv {
+    .formContact #fieldContact #contactDiv {
       display: grid;
       grid-template-areas: "fName lName" "email phone" "service service" "description description" "subscription subscription" "none send"; }
-      #contactIndex .formContact #fieldContact #contactDiv label {
+      .formContact #fieldContact #contactDiv label {
         padding: 5px 40px; }
-      #contactIndex .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 20px;
         padding: 1%;
         height: 45px;
@@ -474,47 +454,47 @@ header {
         background-color: #00000000;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-      #contactIndex .formContact #fieldContact #contactDiv #fNameInput {
+      .formContact #fieldContact #contactDiv #fNameInput {
         grid-area: fName;
         display: flex;
         flex-flow: column wrap; }
-      #contactIndex .formContact #fieldContact #contactDiv #lNameInput {
+      .formContact #fieldContact #contactDiv #lNameInput {
         grid-area: lName;
         display: flex;
         flex-flow: column wrap; }
-      #contactIndex .formContact #fieldContact #contactDiv #emailInput {
+      .formContact #fieldContact #contactDiv #emailInput {
         grid-area: email;
         display: flex;
         flex-flow: column wrap; }
-      #contactIndex .formContact #fieldContact #contactDiv #phoneInput {
+      .formContact #fieldContact #contactDiv #phoneInput {
         grid-area: phone;
         display: flex;
         flex-flow: column wrap; }
-      #contactIndex .formContact #fieldContact #contactDiv #serviceInput {
+      .formContact #fieldContact #contactDiv #serviceInput {
         margin: 2% 0 0 0;
         grid-area: service;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        #contactIndex .formContact #fieldContact #contactDiv #serviceInput select {
+        .formContact #fieldContact #contactDiv #serviceInput select {
           margin: 5px;
           padding: 0;
           height: 35px;
           width: 60%;
           font-size: 16px; }
-          #contactIndex .formContact #fieldContact #contactDiv #serviceInput select option {
+          .formContact #fieldContact #contactDiv #serviceInput select option {
             background-color: black;
             font-weight: bolder; }
-      #contactIndex .formContact #fieldContact #contactDiv #descriptionInput {
+      .formContact #fieldContact #contactDiv #descriptionInput {
         grid-area: description;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        .formContact #fieldContact #contactDiv #descriptionInput textarea {
           margin: 5px;
           width: 60%;
           height: auto; }
-      #contactIndex .formContact #fieldContact #contactDiv #subInput {
+      .formContact #fieldContact #contactDiv #subInput {
         margin: 2% 20%;
         grid-area: subscription;
         display: flex;
@@ -523,20 +503,20 @@ header {
         align-items: center;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-        #contactIndex .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
           margin: 0 5px;
           align-self: center; }
-        #contactIndex .formContact #fieldContact #contactDiv #subInput #subLabel {
+        .formContact #fieldContact #contactDiv #subInput #subLabel {
           padding: 0 1%;
           font-size: 16px;
           text-align: center; }
-      #contactIndex .formContact #fieldContact #contactDiv #sendInput {
+      .formContact #fieldContact #contactDiv #sendInput {
         padding: 1% 3% 3% 0;
         grid-area: send;
         display: flex;
         flex-flow: row wrap;
         justify-content: end; }
-        #contactIndex .formContact #fieldContact #contactDiv #sendInput #sendButton {
+        .formContact #fieldContact #contactDiv #sendInput #sendButton {
           width: 200px;
           height: 50px;
           background-color: #247db9dc;
@@ -546,7 +526,7 @@ header {
           color: #b9247dd7;
           text-shadow: 1px 1px 1px black;
           transition: 0.3s ease-in-out; }
-        #contactIndex .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
+        .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
           background-color: #b9247d71;
           border: solid 2px #247eb9;
           color: #247eb9; }
@@ -609,7 +589,7 @@ header {
       grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
       .formContact #fieldContact #contactDiv label {
         padding: 1% 5%; }
-      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 5%;
         padding: 0 3px;
         height: 35px;
@@ -747,7 +727,7 @@ header {
       .formContact #fieldContact #contactDiv label {
         padding: 3px 15px;
         text-align: center; }
-      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 8px;
         padding: 5px;
         height: 30px;
@@ -811,7 +791,7 @@ header {
     margin: 2%;
     padding: 2%;
     border: none;
-    background-image: linear-gradient(144deg, #b9247dd7, #247db9, black 40%); }
+    background-image: linear-gradient(144deg, #b9247dd7, #247eb9, black 40%); }
     .proyects .card a:hover {
       transition: 0.2s ease-in-out;
       transform: scale(1.02, 1.02); }
@@ -865,14 +845,14 @@ header {
   0% {
     transform: translateY(-300vh); } }
   .gear #column2 {
-    animation: column2 1s;
+    animation: column2 .75s;
     animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
 
 @keyframes column2 {
   0% {
     transform: translateY(-300vh); } }
   .gear #column3 {
-    animation: column3 1.5s;
+    animation: column3 1s;
     animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
 
 @keyframes column3 {
@@ -897,10 +877,10 @@ header {
   100% {
     opacity: 100%; } }
       .gear .gearColumn .gearDiv .accordion-item {
-        background-color: rgba(0, 0, 0, 0); }
+        background-color: #00000000; }
         .gear .gearColumn .gearDiv .accordion-item .accordion-button {
           margin: 0;
-          background-color: rgba(0, 0, 0, 0); }
+          background-color: #00000000; }
           .gear .gearColumn .gearDiv .accordion-item .accordion-button .gearImg {
             height: auto;
             width: 95%; }
@@ -920,8 +900,7 @@ header {
           border: solid 3px #b9247d71;
           border-radius: 10px; }
           .gear .gearColumn .gearDiv .accordion-item .accordion-body strong {
-            color: #b9247dd7;
-            text-decoration: double underline #247eb9; }
+            color: #b9247dd7; }
 
 /*-----TABLET-----*/
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -964,7 +943,7 @@ header {
       border-radius: 20px; }
       .team .accordion .accordion-item .accordion-button {
         margin: 0;
-        background-color: rgba(0, 0, 0, 0); }
+        background-color: #00000000; }
         .team .accordion .accordion-item .accordion-button .teamImg {
           margin: 2% 1%;
           width: 55%;
@@ -1004,9 +983,9 @@ header {
   .team .accordion .accordion-item .accordion-body {
     font-size: 12px; } }
 
-.formContact {
+.formContactPage {
   padding: 2%; }
-  .formContact #fieldContact {
+  .formContactPage #fieldContact {
     background-color: #000000d5;
     border-color: #247eb9;
     border-radius: 20px;
@@ -1014,42 +993,38 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: #b9247dd7; }
-    .formContact #fieldContact input:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill, .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
-    .formContact #fieldContact input:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
-    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
-    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
-    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
-    .formContact #fieldContact input:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
-    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
-    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
-    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
-    .formContact #fieldContact textarea:-webkit-autofill,
-    .formContact #fieldContact textarea:-webkit-autofill:hover,
-    .formContact #fieldContact textarea:-webkit-autofill:focus,
-    .formContact #fieldContact select:-webkit-autofill,
-    .formContact #fieldContact select:-webkit-autofill:hover,
-    .formContact #fieldContact select:-webkit-autofill:focus {
+    .formContactPage #fieldContact input:-webkit-autofill, .formContactPage #fieldContact #contactDiv #serviceInput select:-webkit-autofill, .formContactPage #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
+    .formContactPage #fieldContact input:-webkit-autofill:hover,
+    .formContactPage #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
+    .formContactPage #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
+    .formContactPage #fieldContact input:-webkit-autofill:focus,
+    .formContactPage #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
+    .formContactPage #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
+    .formContactPage #fieldContact textarea:-webkit-autofill,
+    .formContactPage #fieldContact textarea:-webkit-autofill:hover,
+    .formContactPage #fieldContact textarea:-webkit-autofill:focus,
+    .formContactPage #fieldContact select:-webkit-autofill,
+    .formContactPage #fieldContact select:-webkit-autofill:hover,
+    .formContactPage #fieldContact select:-webkit-autofill:focus {
       -webkit-text-fill-color: #b9247dd7;
       box-shadow: 0 0 0px 1000px black inset; }
-    .formContact #fieldContact input:focus, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:focus, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:focus, .formContact #fieldContact #contactDiv #serviceInput select:focus, .formContact #fieldContact #contactDiv #descriptionInput textarea:focus,
-    .formContact #fieldContact textarea:focus,
-    .formContact #fieldContact select:focus {
+    .formContactPage #fieldContact input:focus, .formContactPage #fieldContact #contactDiv #serviceInput select:focus, .formContactPage #fieldContact #contactDiv #descriptionInput textarea:focus,
+    .formContactPage #fieldContact textarea:focus,
+    .formContactPage #fieldContact select:focus {
       outline: 3px solid #b9247d71; }
-    .formContact #fieldContact legend {
+    .formContactPage #fieldContact legend {
       padding: 5px;
       margin: 0 50px;
       font-family: "Righteous", cursive;
       font-size: 30px;
       text-align: left;
       color: #247eb9; }
-    .formContact #fieldContact #contactDiv {
+    .formContactPage #fieldContact #contactDiv {
       display: grid;
       grid-template-areas: "fName lName" "email phone" "service service" "description description" "subscription subscription" "none send"; }
-      .formContact #fieldContact #contactDiv label {
+      .formContactPage #fieldContact #contactDiv label {
         padding: 5px 40px; }
-      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContactPage #fieldContact #contactDiv input, .formContactPage #fieldContact #contactDiv #serviceInput select, .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 20px;
         padding: 1%;
         height: 45px;
@@ -1060,47 +1035,47 @@ header {
         background-color: #00000000;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-      .formContact #fieldContact #contactDiv #fNameInput {
+      .formContactPage #fieldContact #contactDiv #fNameInput {
         grid-area: fName;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #lNameInput {
+      .formContactPage #fieldContact #contactDiv #lNameInput {
         grid-area: lName;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #emailInput {
+      .formContactPage #fieldContact #contactDiv #emailInput {
         grid-area: email;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #phoneInput {
+      .formContactPage #fieldContact #contactDiv #phoneInput {
         grid-area: phone;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #serviceInput {
+      .formContactPage #fieldContact #contactDiv #serviceInput {
         margin: 2% 0 0 0;
         grid-area: service;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        .formContact #fieldContact #contactDiv #serviceInput select {
+        .formContactPage #fieldContact #contactDiv #serviceInput select {
           margin: 5px;
           padding: 0;
           height: 35px;
           width: 60%;
           font-size: 16px; }
-          .formContact #fieldContact #contactDiv #serviceInput select option {
+          .formContactPage #fieldContact #contactDiv #serviceInput select option {
             background-color: black;
             font-weight: bolder; }
-      .formContact #fieldContact #contactDiv #descriptionInput {
+      .formContactPage #fieldContact #contactDiv #descriptionInput {
         grid-area: description;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
           margin: 5px;
           width: 60%;
           height: auto; }
-      .formContact #fieldContact #contactDiv #subInput {
+      .formContactPage #fieldContact #contactDiv #subInput {
         margin: 2% 20%;
         grid-area: subscription;
         display: flex;
@@ -1109,20 +1084,20 @@ header {
         align-items: center;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+        .formContactPage #fieldContact #contactDiv #subInput #subCheckbox {
           margin: 0 5px;
           align-self: center; }
-        .formContact #fieldContact #contactDiv #subInput #subLabel {
+        .formContactPage #fieldContact #contactDiv #subInput #subLabel {
           padding: 0 1%;
           font-size: 16px;
           text-align: center; }
-      .formContact #fieldContact #contactDiv #sendInput {
+      .formContactPage #fieldContact #contactDiv #sendInput {
         padding: 1% 3% 3% 0;
         grid-area: send;
         display: flex;
         flex-flow: row wrap;
         justify-content: end; }
-        .formContact #fieldContact #contactDiv #sendInput #sendButton {
+        .formContactPage #fieldContact #contactDiv #sendInput #sendButton {
           width: 200px;
           height: 50px;
           background-color: #247db9dc;
@@ -1132,7 +1107,7 @@ header {
           color: #b9247dd7;
           text-shadow: 1px 1px 1px black;
           transition: 0.3s ease-in-out; }
-        .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
+        .formContactPage #fieldContact #contactDiv #sendInput #aSendButton :hover {
           background-color: #b9247d71;
           border: solid 2px #247eb9;
           color: #247eb9; }
@@ -1148,7 +1123,7 @@ header {
       grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
       .formContact #fieldContact #contactDiv label {
         padding: 1% 5%; }
-      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 5%;
         padding: 0 3px;
         height: 35px;
@@ -1187,7 +1162,7 @@ header {
       .formContact #fieldContact #contactDiv label {
         padding: 3px 15px;
         text-align: center; }
-      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 8px;
         padding: 5px;
         height: 30px;
@@ -1223,19 +1198,64 @@ header {
 
 /* FOOTER */
 footer {
-  height: 6%;
+  padding: 2% 0 2% 0;
+  display: grid;
+  grid-template-areas: "icons menus menus" "info info dev";
   background-color: black;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: bolder;
   color: #b9247dd7;
-  text-align: center; }
-  footer #profileLink {
+  text-align: center;
+  line-height: 1.5; }
+  footer .footerIcons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: solid 1px #247eb9;
+    grid-area: icons; }
+  footer .footerMenu {
+    margin: 0 5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    grid-area: menus; }
+    footer .footerMenu ul {
+      margin-bottom: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center; }
+      footer .footerMenu ul li {
+        color: #247eb9; }
+    footer .footerMenu .footerFAQ {
+      display: flex;
+      flex-flow: column; }
+    footer .footerMenu .footerAbout {
+      display: flex;
+      flex-flow: column; }
+    footer .footerMenu .footerJoin {
+      display: flex;
+      flex-flow: column; }
+  footer .footerInfo {
+    padding-left: 5%;
+    text-align: start;
+    grid-area: info; }
+  footer #footerLink {
     color: #247eb9; }
-  footer #profileLink:hover {
-    color: #247eb9;
+  footer #footerLink:hover {
     text-decoration: underline;
     text-decoration-color: #b9247dd7; }
+  footer #footerLinkIcon:hover {
+    transition: .5s;
+    color: #247eb9; }
+  footer .footerDev {
+    padding-right: 1%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 12px;
+    letter-spacing: .5px;
+    grid-area: dev; }
 
 /* TABLET */
 @media (min-width: 481px) and (max-width: 1024px) {

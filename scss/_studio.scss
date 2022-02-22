@@ -15,7 +15,7 @@
   }
 
   #column2 {
-    animation: column2 1s;
+    animation: column2 .75s;
     animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4);
   }
 
@@ -26,7 +26,7 @@
   }
 
   #column3 {
-    animation: column3 1.5s;
+    animation: column3 1s;
     animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4);
   }
 
@@ -63,11 +63,11 @@
       }
 
       .accordion-item {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: $transparent;
 
         .accordion-button {
           margin: 0;
-          background-color: rgba(0, 0, 0, 0);
+          background-color: $transparent;
 
           .gearImg {
             height: auto;
@@ -93,16 +93,15 @@
 
           text-align: center;
 
-          font-family: "Quicksand", sans-serif;
-          color: #247eb9;
+          font-family: $secondaryFont;
+          color: $blue;
           font-weight: bold;
 
           border: solid 3px $veryTransparentPink;
           border-radius: 10px;
 
           strong {
-            color: #b9247dd7;
-            text-decoration: double underline #247eb9;
+            color: $pink;
           }
         }
       }

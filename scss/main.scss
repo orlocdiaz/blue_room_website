@@ -139,7 +139,13 @@ header {
 /* FOOTER */
 
 footer {
-  height: 6%;
+  padding: 2% 0 2% 0;
+
+  display: grid;
+  grid-template-areas: 
+  "icons menus menus"
+  "info info dev"
+;
 
   background-color: $black;
 
@@ -148,15 +154,74 @@ footer {
   font-weight: bolder;
   color: $pink;
   text-align: center;
+  line-height: 1.5;
 
-  #profileLink {
+  .footerIcons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: solid 1px $blue;
+    grid-area: icons;
+  }
+  .footerMenu{
+    margin: 0 5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    grid-area: menus;
+
+    ul{
+      margin-bottom: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+
+      li{
+        color: $blue
+      }
+    }
+
+    .footerFAQ{
+      @include footerList;
+    }
+
+    .footerAbout{
+      @include footerList;
+    }
+
+    .footerJoin{
+      @include footerList;
+    }
+  }
+  .footerInfo{
+    padding-left: 5%;
+    text-align: start;
+    grid-area: info;
+  }
+
+  #footerLink {
     color: $blue;
   }
 
-  #profileLink:hover {
-    color: $blue;
+  #footerLink:hover {
     text-decoration: underline;
     text-decoration-color: $pink;
+  }
+
+  #footerLinkIcon:hover {
+    transition: .5s;
+    color: $blue;
+  }
+
+  .footerDev{
+    padding-right: 1%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 12px;
+    letter-spacing: .5px;
+
+    grid-area: dev;
   }
 }
 
