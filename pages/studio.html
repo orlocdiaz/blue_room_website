@@ -1,258 +1,314 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Studio - Blue Room Studio</title>
-    <meta name="keywords" content="recording studio, audio gear, microphones, music instruments">
-    <meta name="description" content="We have great gear and we will make sure to use the right piece of gear that best fits your proyect">
 
-    <link rel="shortcut icon" href="../content/ricklogo.png">
-    <link rel="stylesheet" href="../estilos/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Studio - Blue Room Studio</title>
+  <meta name="keywords" content="recording studio, audio gear, microphones, music instruments">
+  <meta name="description"
+    content="We have great gear and we will make sure to use the right piece of gear that best fits your proyect">
+
+  <link rel="shortcut icon" href="../content/ricklogo.png">
+  <link rel="stylesheet" href="../estilos/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-<!----------------MENU------------------------->
-    <header class="header">
+<body id="bodyStudio">
+  <!----------------MENU------------------------->
+  <header class="header">
 
-        <nav class="navbar navbar-expand-lg" id="navFlex">
-          <div class="container-fluid">
-            <a class="navbar-brand aBrand" href="../index.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
-                      <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
-                    </svg>
-                    Blue Room
-                </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
-                <li class="nav-item, menuItem">
-                  <a class="nav-link active aMenuItem" aria-current="page" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item, menuItem">
-                  <a class="nav-link active aMenuItem" aria-current="page" href="./proyects.html">Proyects</a>
-                </li>
-                <li class="nav-item, menuItem">
-                  <a class="nav-link active aMenuItem" aria-current="page" href="./studio.html">Studio</a>
-                </li>
-                <li class="nav-item, menuItem">
-                  <a class="nav-link active aMenuItem" aria-current="page" href="./about_us.html">About Us</a>
-                </li>
-                <li class="nav-item, menuItem">
-                  <a class="nav-link active aMenuItem" aria-current="page" href="./contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </header>
-<!----------------GEAR------------------------->
-    <h3 class="h-pageTitle">The Studio</h3>
-    <h4 class="h-subtitle">We have the best gear to make you sound great!</h4>
-    <section class="gear accordion" id="accordionExample">
+    <nav class="navbar navbar-expand-lg" id="navFlex">
+      <div class="container-fluid">
+        <a class="navbar-brand aBrand" href="../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z" />
+          </svg>
+          Blue Room
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./proyects.html">Proyects</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./studio.html">Studio</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./about_us.html">About Us</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!----------------GEAR------------------------->
+  <h3 class="h-pageTitle">The Studio</h3>
+  <h4 class="h-subtitle">We have the best gear to make you sound great!</h4>
+  <section class="gear accordion" id="accordionExample">
 
     <div class="gearColumn" id="column1">
-        <div class="gearDiv">
-          <div class="accordion-item">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h5 class="h-itemTitle" id="headingOne">
-                SM57
-                </h5>
-                <img src="../content/sm57.png" class="gearImg">
-              </button>
+      <div class="gearDiv">
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <h5 class="h-itemTitle" id="headingOne">
+              SM57
+            </h5>
+            <img src="../content/sm57.png" class="gearImg">
+          </button>
 
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>The Shure SM57 is a low-impedance cardioid dynamic microphone</strong> made by Shure Incorporated and commonly used in live sound reinforcement and studio recording. It is one of the best-selling microphones in the world.
-              </div>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The Shure SM57 is a low-impedance cardioid dynamic microphone</strong> made by Shure Incorporated
+              and commonly used in live sound reinforcement and studio recording. It is one of the best-selling
+              microphones in the world.
             </div>
           </div>
-
         </div>
-
-        <div class="gearDiv">
-          <div class="accordion-item">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h5 class="h-itemTitle" id="headingTwo">
-                Apollo 8p
-                </h5>
-                <img src="../content/apollo8p.png" class="gearImg">
-              </button>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Loaded with cutting-edge digital conversion and eight Unison-equipped preamps and UAD-2 QUAD core processing,</strong> the Universal Audio 16-in/20-out Apollo 8p Thunderbolt audio interface demonstrates exactly why the Apollo line has been one of the most popular audio-interface series.
-              </div>
-            </div>
-          </div>
 
       </div>
-      
-        <div class="gearDiv">
-          <div class="accordion-item">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h5 class="h-itemTitle" id="headingThree">
-                Logic Pro X
-                </h5>
-                <img src="../content/logic.png" class="gearImg">
-              </button>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Logic Pro is a full-featured music and audio app you can use for every aspect of music creation:</strong> recording, arranging, mixing, and more–everything from sketching your initial ideas to producing polished final mixes.
-              </div>
+
+      <div class="gearDiv">
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h5 class="h-itemTitle" id="headingTwo">
+              Apollo 8p
+            </h5>
+            <img src="../content/apollo8p.png" class="gearImg">
+          </button>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Loaded with cutting-edge digital conversion and eight Unison-equipped preamps and UAD-2 QUAD core
+                processing,</strong> the Universal Audio 16-in/20-out Apollo 8p Thunderbolt audio interface demonstrates
+              exactly why the Apollo line has been one of the most popular audio-interface series.
             </div>
           </div>
         </div>
 
-        <div class="gearDiv">
+      </div>
 
-      <div class="accordion-item">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <div class="gearDiv">
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <h5 class="h-itemTitle" id="headingThree">
+              Logic Pro X
+            </h5>
+            <img src="../content/logic.png" class="gearImg">
+          </button>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Logic Pro is a full-featured music and audio app you can use for every aspect of music
+                creation:</strong> recording, arranging, mixing, and more–everything from sketching your initial ideas
+              to producing polished final mixes.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
             <h5 class="h-itemTitle" id="headingFour">
-            Little Mark Vintage
+              Little Mark Vintage
             </h5>
             <img src="../content/bassamp.png" class="gearImg">
           </button>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            Offering lots of sound options and features really satisfying <strong>all bass players searching for both modern tones or old school ones.</strong>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Offering lots of sound options and features really satisfying <strong>all bass players searching for both
+                modern tones or old school ones.</strong>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     </div>
-    
+
 
     <div class="gearColumn" id="column2">
-        <div class="gearDiv">
-            
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <h5 class="h-itemTitle" id="headingFive">
-                    SM58
-                  </h5>
-                  <img src="../content/sm58.png" class="gearImg">
-                </button>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>The Shure SM58 is a unidirectional (cardioid) dynamic vocal microphone</strong> for professional vocal use in sound reinforcement and studio recording. A highly effective, built-in, spherical filter minimizes wind and breath “pop” noise. ... The SM58 has a tailored vocal response for a sound which is a world standard.
-                </div>
-              </div>
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <h5 class="h-itemTitle" id="headingFive">
+              SM58
+            </h5>
+            <img src="../content/sm58.png" class="gearImg">
+          </button>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The Shure SM58 is a unidirectional (cardioid) dynamic vocal microphone</strong> for professional
+              vocal use in sound reinforcement and studio recording. A highly effective, built-in, spherical filter
+              minimizes wind and breath “pop” noise. ... The SM58 has a tailored vocal response for a sound which is a
+              world standard.
             </div>
-
           </div>
+        </div>
 
-        <div class="gearDiv">
+      </div>
 
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  <h5 class="h-itemTitle" id="headingSix">
-                  Scarlett 2i2
-                  </h5>
-                  <img src="../content/2i2.png" class="gearImg">
-                </button>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Scarlett’s best-selling interface – millions of musicians use 2i2 to write and record every day. <strong>Featuring natural sounding 3rd Gen mic preamps, and Air, emulating Focusrite's original ISA preamps, 2i2 is getting musicians the most from their mics everywhere, all the time. </strong>
-                </div>
-              </div>
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <h5 class="h-itemTitle" id="headingSix">
+              Scarlett 2i2
+            </h5>
+            <img src="../content/2i2.png" class="gearImg">
+          </button>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Scarlett’s best-selling interface – millions of musicians use 2i2 to write and record every day.
+              <strong>Featuring natural sounding 3rd Gen mic preamps, and Air, emulating Focusrite's original ISA
+                preamps, 2i2 is getting musicians the most from their mics everywhere, all the time. </strong>
             </div>
-
           </div>
+        </div>
 
-        <div class="gearDiv">
+      </div>
 
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  <h5 class="h-itemTitle" id="headingSeven">
-                  Tube Meister Deluxe 40
-                  </h5>
-                  <img src="../content/gtramp.png" class="gearImg">
-                </button>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  TubeMeister Deluxe is simply jaw dropping. Deluxe tones take you from <strong>pure, pristine cleans to an authentic brown sound and devastatingly powerful modern-day high gain, </strong>all influenced by the most beloved channels of the flagship TriAmp Mark 3.
-                </div>
-              </div>
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <h5 class="h-itemTitle" id="headingSeven">
+              Tube Meister Deluxe 40
+            </h5>
+            <img src="../content/gtramp.png" class="gearImg">
+          </button>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              TubeMeister Deluxe is simply jaw dropping. Deluxe tones take you from <strong>pure, pristine cleans to an
+                authentic brown sound and devastatingly powerful modern-day high gain, </strong>all influenced by the
+              most beloved channels of the flagship TriAmp Mark 3.
             </div>
-
           </div>
+        </div>
+
+      </div>
 
     </div>
 
     <div class="gearColumn" id="column3">
-        <div class="gearDiv">
+      <div class="gearDiv">
 
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  <h5 class="h-itemTitle" id="headingEight">
-                  C214
-                  </h5>
-                  <img src="../content/c214.png" class="gearImg">
-                </button>
-              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>The AKG C214 delivers AKG's classic large-diaphragm sound </strong>- and it's also capable of an impressive 143dB dynamic range for uncompressed, natural transients.
-                </div>
-              </div>
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            <h5 class="h-itemTitle" id="headingEight">
+              C214
+            </h5>
+            <img src="../content/c214.png" class="gearImg">
+          </button>
+          <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The AKG C214 delivers AKG's classic large-diaphragm sound </strong>- and it's also capable of an
+              impressive 143dB dynamic range for uncompressed, natural transients.
             </div>
-
           </div>
+        </div>
 
-        <div class="gearDiv">
+      </div>
 
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                  <h5 class="h-itemTitle" id="headingNine">
-                  Pro Tools
-                  </h5>
-                  <img src="../content/protools.png" class="gearImg">
-                </button>
-              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Pro Tools is a <strong>digital audio workstation (DAW)</strong> developed and released by Avid Technology. It is used for music creation and production, sound for picture (sound design, audio post-production and mixing) and, more generally,<strong> sound recording, editing, and mastering processes. </strong>
-                </div>
-              </div>
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <h5 class="h-itemTitle" id="headingNine">
+              Pro Tools
+            </h5>
+            <img src="../content/protools.png" class="gearImg">
+          </button>
+          <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Pro Tools is a <strong>digital audio workstation (DAW)</strong> developed and released by Avid Technology.
+              It is used for music creation and production, sound for picture (sound design, audio post-production and
+              mixing) and, more generally,<strong> sound recording, editing, and mastering processes. </strong>
             </div>
-
           </div>
+        </div>
 
-        <div class="gearDiv">
+      </div>
 
-            <div class="accordion-item">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                  <h5 class="h-itemTitle" id="headingTen">
-                  A7X
-                  </h5>
-                  <img src="../content/a7x.png" class="gearImg">
-                </button>
-              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>It is one of the most balanced and versatile speakers currently on the market. </strong>The X-ART tweeter produces detailed, uncompressed highs and upper mids without being tiring over long listening periods. Despite its compact housing, the bass response is powerful and precise.                </div>
-              </div>
+      <div class="gearDiv">
+
+        <div class="accordion-item">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            <h5 class="h-itemTitle" id="headingTen">
+              A7X
+            </h5>
+            <img src="../content/a7x.png" class="gearImg">
+          </button>
+          <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>It is one of the most balanced and versatile speakers currently on the market. </strong>The X-ART
+              tweeter produces detailed, uncompressed highs and upper mids without being tiring over long listening
+              periods. Despite its compact housing, the bass response is powerful and precise.
             </div>
-
           </div>
+        </div>
+
+      </div>
 
 
     </div>
-    </section>
+  </section>
 
-<!----------------FOOTER------------------------->
-    <footer clas="footerFlex">    
-        <hr id="hrfooter">
-        &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
-    </footer></body>
+  <!----------------FOOTER------------------------->
+  <footer clas="footerFlex">
+    <hr id="hrfooter">
+    &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos"
+      target="blank" id="profileLink">Orlando Díaz</a>
+  </footer>
 
-<!--Script Bootsrap-->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <!--Script Bootsrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
 
 </body>
+
+</html>

@@ -1,0 +1,359 @@
+.formContact {
+  padding: 2%;
+
+  #fieldContact {
+    background-color: $mediumTransparentBlack;
+    border-color: $blue;
+    border-radius: 20px;
+
+    font-family: $secondaryFont;
+    font-size: 20px;
+    font-weight: bold;
+    color: $pink;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: $pink;
+      box-shadow: 0 0 0px 1000px $black inset;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 3px solid $veryTransparentPink;
+    }
+
+    legend {
+      padding: 5px;
+      margin: 0 50px;
+
+      font-family: $mainFont;
+      font-size: 30px;
+      text-align: left;
+      color: $blue;
+    }
+
+    #contactDiv {
+      display: grid;
+      grid-template-areas:
+        "fName lName"
+        "email phone"
+        "service service"
+        "description description"
+        "subscription subscription"
+        "none send";
+
+      label {
+        padding: 5px 40px;
+      }
+
+      input {
+        margin: 5px 20px;
+        padding: 1%;
+        height: 45px;
+
+        font-family: $secondaryFont;
+        font-size: 18px;
+        color: $pink;
+        font-weight: bolder;
+
+        background-color: $transparent;
+        border: solid 2px $blue;
+        border-radius: 5px;
+      }
+
+      #fNameInput {
+        grid-area: fName;
+
+        @include contactInputs;
+      }
+
+      #lNameInput {
+        grid-area: lName;
+
+        @include contactInputs;
+      }
+
+      #emailInput {
+        grid-area: email;
+
+        @include contactInputs;
+      }
+
+      #phoneInput {
+        grid-area: phone;
+
+        @include contactInputs;
+      }
+
+      #serviceInput {
+        margin: 2% 0 0 0;
+
+        grid-area: service;
+
+        @include contactInputs;
+        align-items: center;
+
+        select {
+          @extend input;
+          margin: 5px;
+          padding: 0;
+          height: 35px;
+          width: 60%;
+
+          font-size: 16px;
+
+          option {
+            background-color: $black;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      #descriptionInput {
+        grid-area: description;
+
+        @include contactInputs;
+        align-items: center;
+
+        textarea {
+          @extend input;
+          margin: 5px;
+          width: 60%;
+          height: auto;
+        }
+      }
+
+      #subInput {
+        margin: 2% 20%;
+
+        grid-area: subscription;
+
+        display: flex;
+        flex-flow: row-reverse wrap-reverse;
+        justify-content: center;
+        align-items: center;
+
+        border: solid 2px $blue;
+        border-radius: 5px;
+
+        #subCheckbox {
+          margin: 0 5px;
+
+          align-self: center;
+        }
+
+        #subLabel {
+          padding: 0 1%;
+
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      #sendInput {
+        padding: 1% 3% 3% 0;
+        grid-area: send;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: end;
+
+        #sendButton {
+          width: 200px;
+          height: 50px;
+
+          background-color: $slightlyTransparentBlue;
+          border: solid 2px $pink;
+
+          font-family: $mainFont;
+          font-size: 26px;
+          color: $pink;
+          text-shadow: 1px 1px 1px $black;
+
+          transition: 0.3s ease-in-out;
+        }
+
+        #aSendButton :hover {
+          background-color: $veryTransparentPink;
+          border: solid 2px $blue;
+
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .formContact {
+    #fieldContact {
+      font-size: 16px;
+
+      legend {
+        font-size: 24px;
+      }
+
+      #contactDiv {
+        display: grid;
+        grid-template-areas:
+          "fName"
+          "lName"
+          "email"
+          "phone"
+          "service"
+          "description"
+          "subscription"
+          "send";
+
+        label {
+          padding: 1% 5%;
+        }
+
+        input {
+          margin: 5px 5%;
+          padding: 0 3px;
+          height: 35px;
+
+          font-size: 14px;
+        }
+        #serviceInput {
+          select {
+            padding: 0 3px;
+            height: 30px;
+            width: 80%;
+
+            font-size: 11px;
+          }
+        }
+
+        #descriptionInput {
+          textarea {
+            padding: 5px;
+            height: 80px;
+            width: 80%;
+            font-size: 14px;
+          }
+        }
+
+        #subInput {
+          margin: 2% 10%;
+
+          #subLabel {
+            font-size: 12px;
+          }
+        }
+        #sendInput {
+          #sendButton {
+            margin: 10px;
+            padding: 5px;
+            width: 180px;
+            height: 40px;
+
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 480px) {
+  .formContact {
+    #fieldContact {
+      font-size: 16px;
+
+      legend {
+        margin: 0 15px;
+        font-size: 24px;
+      }
+
+      #contactDiv {
+        display: grid;
+        grid-template-areas:
+          "fName"
+          "lName"
+          "email"
+          "phone"
+          "service"
+          "description"
+          "subscription"
+          "send";
+
+        label {
+          padding: 3px 15px;
+          text-align: center;
+        }
+
+        input {
+          margin: 8px;
+          padding: 5px;
+          height: 30px;
+          width: 80%;
+
+          font-size: 14px;
+
+          align-self: center;
+        }
+        #serviceInput {
+          select {
+            padding: 0 5px;
+            width: 80%;
+            height: 30px;
+
+            font-size: 14px;
+          }
+        }
+
+        #descriptionInput {
+          textarea {
+            margin: 8px;
+            height: 80px;
+            width: 80%;
+
+            font-size: 14px;
+          }
+        }
+
+        #subInput {
+          margin: 8px 10%;
+
+          #subLabel {
+            padding: 0 10px;
+
+            font-size: 12px;
+            text-align: center;
+          }
+
+          #subCheckbox {
+            width: 12px;
+          }
+        }
+
+        #sendInput {
+          justify-content: center;
+
+          #sendButton {
+            margin: 10px;
+            padding: 5px;
+            height: 50px;
+            width: 150px;
+
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

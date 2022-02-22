@@ -1,7 +1,14 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Righteous", cursive; }
 
-p, a, li {
+p,
+a,
+li {
   font-family: "Quicksand", sans-serif; }
 
 .h-pink {
@@ -120,7 +127,7 @@ hr {
   border-top: 1px solid #247eb9;
   border-bottom: 1px solid #247eb9;
   border-top-left-radius: 5px;
-  box-shadow: 0px 0px 5px #38a9f5ee,  0px 0px 10px #6cc2fc,  0px 0px 20px #97d2fa;
+  box-shadow: 0px 0px 5px #38a9f5ee, 0px 0px 10px #6cc2fc, 0px 0px 20px #97d2fa;
   animation: hrAnim 1s ease-out; }
 
 @keyframes hrAnim {
@@ -150,7 +157,7 @@ header {
       font-family: "Righteous", cursive;
       color: #b9247dd7;
       font-size: 30px;
-      transition: ease-in-out .2s; }
+      transition: ease-in-out 0.2s; }
     header #navFlex .aBrand:hover {
       color: #247eb9; }
     header #navFlex ul {
@@ -172,12 +179,11 @@ header {
           font-weight: bolder;
           list-style: none;
           box-sizing: content-box;
-          transition: ease-in-out .2s; }
+          transition: ease-in-out 0.2s; }
         header #navFlex .ulMenu .menuItem .aMenuItem:hover {
           color: #247eb9;
           text-decoration: underline; }
 
-/* INDEX */
 .mainFlex {
   flex-flow: row wrap; }
   .mainFlex #slogan {
@@ -404,9 +410,8 @@ header {
     border-radius: 20px; }
 
 /* CONTACT INDEX */
-.formContact {
+#contactIndex .formContact {
   padding: 2%;
-  /* background-image: url(../content/miclights.jpg); */
   background: linear-gradient(45deg, #b94289a2, #247db991, #b94289a2, #247db991);
   background-size: 400% 100%;
   height: 100%;
@@ -419,7 +424,7 @@ header {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-  .formContact #fieldContact {
+  #contactIndex .formContact #fieldContact {
     background-color: #000000d5;
     border-color: #247eb9;
     border-radius: 20px;
@@ -427,36 +432,38 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: #b9247dd7; }
-    .formContact #fieldContact input:-webkit-autofill, .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
-    .formContact #fieldContact input:-webkit-autofill:hover,
-    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
-    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
-    .formContact #fieldContact input:-webkit-autofill:focus,
-    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
-    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
-    .formContact #fieldContact textarea:-webkit-autofill,
-    .formContact #fieldContact textarea:-webkit-autofill:hover,
-    .formContact #fieldContact textarea:-webkit-autofill:focus,
-    .formContact #fieldContact select:-webkit-autofill,
-    .formContact #fieldContact select:-webkit-autofill:hover,
-    .formContact #fieldContact select:-webkit-autofill:focus {
+    #contactIndex .formContact #fieldContact input:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
+    #contactIndex .formContact #fieldContact input:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact input:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact textarea:-webkit-autofill,
+    #contactIndex .formContact #fieldContact textarea:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact textarea:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact select:-webkit-autofill,
+    #contactIndex .formContact #fieldContact select:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact select:-webkit-autofill:focus {
       -webkit-text-fill-color: #b9247dd7;
       box-shadow: 0 0 0px 1000px black inset; }
-    .formContact #fieldContact input:focus, .formContact #fieldContact #contactDiv #serviceInput select:focus, .formContact #fieldContact #contactDiv #descriptionInput textarea:focus, .formContact #fieldContact textarea:focus, .formContact #fieldContact select:focus {
+    #contactIndex .formContact #fieldContact input:focus, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:focus, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:focus,
+    #contactIndex .formContact #fieldContact textarea:focus,
+    #contactIndex .formContact #fieldContact select:focus {
       outline: 3px solid #b9247d71; }
-    .formContact #fieldContact legend {
+    #contactIndex .formContact #fieldContact legend {
       padding: 5px;
       margin: 0 50px;
       font-family: "Righteous", cursive;
       font-size: 30px;
       text-align: left;
       color: #247eb9; }
-    .formContact #fieldContact #contactDiv {
+    #contactIndex .formContact #fieldContact #contactDiv {
       display: grid;
-      grid-template-areas: "fName lName" "email phone" "service service" "description description" "subscription subscription" "none send"; }
-      .formContact #fieldContact #contactDiv label {
+      grid-template-areas: "fName lName" "email phone" "service service" "description description" "subscription subscription" "none send"; }
+      #contactIndex .formContact #fieldContact #contactDiv label {
         padding: 5px 40px; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      #contactIndex .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 20px;
         padding: 1%;
         height: 45px;
@@ -467,47 +474,47 @@ header {
         background-color: #00000000;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-      .formContact #fieldContact #contactDiv #fNameInput {
+      #contactIndex .formContact #fieldContact #contactDiv #fNameInput {
         grid-area: fName;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #lNameInput {
+      #contactIndex .formContact #fieldContact #contactDiv #lNameInput {
         grid-area: lName;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #emailInput {
+      #contactIndex .formContact #fieldContact #contactDiv #emailInput {
         grid-area: email;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #phoneInput {
+      #contactIndex .formContact #fieldContact #contactDiv #phoneInput {
         grid-area: phone;
         display: flex;
         flex-flow: column wrap; }
-      .formContact #fieldContact #contactDiv #serviceInput {
+      #contactIndex .formContact #fieldContact #contactDiv #serviceInput {
         margin: 2% 0 0 0;
         grid-area: service;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        .formContact #fieldContact #contactDiv #serviceInput select {
+        #contactIndex .formContact #fieldContact #contactDiv #serviceInput select {
           margin: 5px;
           padding: 0;
           height: 35px;
           width: 60%;
           font-size: 16px; }
-          .formContact #fieldContact #contactDiv #serviceInput select option {
+          #contactIndex .formContact #fieldContact #contactDiv #serviceInput select option {
             background-color: black;
             font-weight: bolder; }
-      .formContact #fieldContact #contactDiv #descriptionInput {
+      #contactIndex .formContact #fieldContact #contactDiv #descriptionInput {
         grid-area: description;
         display: flex;
         flex-flow: column wrap;
         align-items: center; }
-        .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea {
           margin: 5px;
           width: 60%;
           height: auto; }
-      .formContact #fieldContact #contactDiv #subInput {
+      #contactIndex .formContact #fieldContact #contactDiv #subInput {
         margin: 2% 20%;
         grid-area: subscription;
         display: flex;
@@ -516,20 +523,20 @@ header {
         align-items: center;
         border: solid 2px #247eb9;
         border-radius: 5px; }
-        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+        #contactIndex .formContact #fieldContact #contactDiv #subInput #subCheckbox {
           margin: 0 5px;
           align-self: center; }
-        .formContact #fieldContact #contactDiv #subInput #subLabel {
+        #contactIndex .formContact #fieldContact #contactDiv #subInput #subLabel {
           padding: 0 1%;
           font-size: 16px;
           text-align: center; }
-      .formContact #fieldContact #contactDiv #sendInput {
+      #contactIndex .formContact #fieldContact #contactDiv #sendInput {
         padding: 1% 3% 3% 0;
         grid-area: send;
         display: flex;
         flex-flow: row wrap;
         justify-content: end; }
-        .formContact #fieldContact #contactDiv #sendInput #sendButton {
+        #contactIndex .formContact #fieldContact #contactDiv #sendInput #sendButton {
           width: 200px;
           height: 50px;
           background-color: #247db9dc;
@@ -538,273 +545,11 @@ header {
           font-size: 26px;
           color: #b9247dd7;
           text-shadow: 1px 1px 1px black;
-          transition: .3s ease-in-out; }
-        .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
+          transition: 0.3s ease-in-out; }
+        #contactIndex .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
           background-color: #b9247d71;
           border: solid 2px #247eb9;
           color: #247eb9; }
-
-footer {
-  height: 6%;
-  background-color: black;
-  font-family: "Quicksand", sans-serif;
-  font-size: 14px;
-  font-weight: bolder;
-  color: #b9247dd7;
-  text-align: center; }
-  footer #profileLink {
-    color: #247eb9; }
-  footer #profileLink:hover {
-    color: #247eb9;
-    text-decoration: underline;
-    text-decoration-color: #b9247dd7; }
-
-.proyects {
-  margin: 2%;
-  width: 96%;
-  min-height: 90vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center; }
-  .proyects .proyectOne {
-    animation: proy1Anim .75s ease-out; }
-
-@keyframes proy1Anim {
-  0% {
-    transform: translate(-100vw); } }
-  .proyects .proyectTwo {
-    animation: proy2Anim .5s ease-out; }
-
-@keyframes proy2Anim {
-  0% {
-    transform: translate(-100vw); } }
-  .proyects .proyectThree {
-    animation: proy3Anim .25s ease-out; }
-
-@keyframes proy3Anim {
-  0% {
-    transform: translate(-100vw); } }
-  .proyects .card {
-    margin: 2%;
-    padding: 2%;
-    border: none;
-    background-image: linear-gradient(144deg, #b9247dd7, #247db9, black 40%); }
-    .proyects .card a:hover {
-      transition: .2s ease-in-out;
-      transform: scale(1.02, 1.02); }
-    .proyects .card #itemTitleSpan {
-      color: #247eb9; }
-
-/*-----TABLET-----*/
-@media (min-width: 481px) and (max-width: 1024px) {
-  .proyects #mainProyect {
-    width: 100%; }
-  .proyects #secondaryProyect {
-    width: 100%; }
-  .proyects .proyectOne {
-    width: 50%; }
-  .proyects .proyectTwo {
-    width: 50%; }
-  .proyects .proyectThree {
-    width: 50%; }
-  .proyects .card {
-    margin: 1%; }
-    .proyects .card .card-body {
-      padding: 1%; }
-      .proyects .card .card-body h5 {
-        font-size: 30px; } }
-
-/*-----SMARTPHONE-----*/
-@media (max-width: 480px) {
-  .proyects h3 {
-    font-size: 30px;
-    margin: 5%; }
-  .proyects .proyectOne {
-    width: 100%; }
-  .proyects .proyectTwo {
-    width: 50%; }
-  .proyects .proyectThree {
-    width: 50%; }
-  .proyects .card {
-    margin: 1%; }
-    .proyects .card .card-body {
-      padding: 1%; } }
-
-.gear {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
-  .gear #column1 {
-    animation: column1 .5s;
-    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
-
-@keyframes column1 {
-  0% {
-    transform: translateY(-300vh); } }
-  .gear #column2 {
-    animation: column2 1s;
-    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
-
-@keyframes column2 {
-  0% {
-    transform: translateY(-300vh); } }
-  .gear #column3 {
-    animation: column3 1.5s;
-    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
-
-@keyframes column3 {
-  0% {
-    transform: translateY(-300vh); } }
-  .gear .gearColumn {
-    width: 30%;
-    display: flex;
-    flex-flow: column wrap; }
-    .gear .gearColumn .gearDiv {
-      margin: 5px;
-      padding: 5px;
-      width: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      animation: gearAnim 1s; }
-
-@keyframes gearAnim {
-  0% {
-    opacity: 0%; }
-  100% {
-    opacity: 100%; } }
-      .gear .gearColumn .gearDiv .accordion-item {
-        background-color: rgba(0, 0, 0, 0); }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-button {
-          margin: 0;
-          background-color: rgba(0, 0, 0, 0); }
-          .gear .gearColumn .gearDiv .accordion-item .accordion-button .gearImg {
-            height: auto;
-            width: 95%; }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-button:hover {
-          transition: .2s ease;
-          z-index: 1;
-          transform: scale(1.05, 1.05); }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-button:not(.collapsed) h5 {
-          color: #247eb9; }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-body {
-          margin: 0;
-          width: 95%;
-          text-align: center;
-          font-family: 'Quicksand', sans-serif;
-          color: #247eb9;
-          font-weight: bold; }
-          .gear .gearColumn .gearDiv .accordion-item .accordion-body strong {
-            color: #b9247dd7;
-            text-decoration: double underline #247eb9; }
-
-/*-----TABLET-----*/
-@media (min-width: 481px) and (max-width: 1024px) {
-  .accordion-body {
-    font-size: 14px; } }
-
-/* SMARTPHONE */
-@media (max-width: 480px) {
-  h3 {
-    font-size: 30px !important;
-    margin: 5%; }
-  h4 {
-    font-size: 20px !important; }
-  .gear {
-    flex-flow: column; }
-    .gear .gearColumn {
-      width: 100%; }
-      .gear .gearColumn .gearDiv {
-        margin: 0; }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-button .gearImg {
-          width: 80%; }
-        .gear .gearColumn .gearDiv .accordion-item .accordion-body {
-          font-size: 14px; } }
-
-.h-pink {
-  color: #b9247dd7; }
-
-.h-blue {
-  color: #247eb9; }
-
-.size-normal {
-  font-size: 16px; }
-
-.size-brand {
-  font-size: 22px; }
-
-.size-legend {
-  font-size: 30px; }
-
-.size-input {
-  font-size: 18px; }
-
-.h-slogan {
-  font-size: 18vh; }
-
-.h-description {
-  font-size: 14vh; }
-
-.h-pageTitle {
-  font-size: 6vh; }
-
-.h-subtitle {
-  font-size: 4vh; }
-
-.h-itemTitle {
-  font-size: 3vh; }
-
-.h-slogan {
-  color: #b9247dd7; }
-
-.h-description {
-  color: #b9247dd7; }
-
-.h-pageTitle {
-  color: #b9247dd7; }
-
-.h-subtitle {
-  color: #247eb9; }
-
-.h-itemTitle {
-  color: #b9247dd7; }
-
-.h-slogan {
-  font-family: "Righteous", cursive; }
-
-.h-description {
-  font-family: "Righteous", cursive; }
-
-.h-pageTitle {
-  font-family: "Righteous", cursive; }
-
-.h-subtitle {
-  font-family: "Righteous", cursive; }
-
-.h-itemTitle {
-  font-family: "Righteous", cursive; }
-
-.h-pageTitle {
-  text-shadow: 3px 3px 5px #b9247d69; }
-
-.h-subtitle {
-  text-shadow: 1px 1px 2px #247eb9; }
-
-.h-pageTitle {
-  margin: 1%; }
-
-.h-subtitle {
-  margin: 1%; }
-
-.h-itemTitle {
-  margin: 1% 0; }
-
-.h-pageTitle {
-  text-align: center; }
-
-.h-subtitle {
-  text-align: center; }
 
 /* TABLET */
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -864,7 +609,7 @@ footer {
       grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
       .formContact #fieldContact #contactDiv label {
         padding: 1% 5%; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 5%;
         padding: 0 3px;
         height: 35px;
@@ -888,21 +633,10 @@ footer {
         padding: 5px;
         width: 180px;
         height: 40px;
-        font-size: 18px; }
-  footer {
-    font-size: 12px;
-    font-weight: bolder; } }
+        font-size: 18px; } }
 
 /* SMARTPHONE */
 @media (max-width: 480px) {
-  /*------NAV-----*/
-  header #navFlex {
-    height: 6vh;
-    position: static; }
-    header #navFlex .aBrand {
-      font-size: 20px; }
-    header #navFlex .menuItem {
-      font-size: 12px; }
   /*-----INDEX-----*/
   .mainFlex #slogan {
     justify-content: center;
@@ -1013,7 +747,7 @@ footer {
       .formContact #fieldContact #contactDiv label {
         padding: 3px 15px;
         text-align: center; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
         margin: 8px;
         padding: 5px;
         height: 30px;
@@ -1045,7 +779,480 @@ footer {
           padding: 5px;
           height: 50px;
           width: 150px;
-          font-size: 22px; }
+          font-size: 22px; } }
+
+.proyects {
+  margin: 2%;
+  width: 96%;
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center; }
+  .proyects .proyectOne {
+    animation: proy1Anim 0.75s ease-out; }
+
+@keyframes proy1Anim {
+  0% {
+    transform: translate(-100vw); } }
+  .proyects .proyectTwo {
+    animation: proy2Anim 0.5s ease-out; }
+
+@keyframes proy2Anim {
+  0% {
+    transform: translate(-100vw); } }
+  .proyects .proyectThree {
+    animation: proy3Anim 0.25s ease-out; }
+
+@keyframes proy3Anim {
+  0% {
+    transform: translate(-100vw); } }
+  .proyects .card {
+    margin: 2%;
+    padding: 2%;
+    border: none;
+    background-image: linear-gradient(144deg, #b9247dd7, #247db9, black 40%); }
+    .proyects .card a:hover {
+      transition: 0.2s ease-in-out;
+      transform: scale(1.02, 1.02); }
+    .proyects .card #itemTitleSpan {
+      color: #247eb9; }
+
+/*-----TABLET-----*/
+@media (min-width: 481px) and (max-width: 1024px) {
+  .proyects #mainProyect {
+    width: 100%; }
+  .proyects #secondaryProyect {
+    width: 100%; }
+  .proyects .proyectOne {
+    width: 50%; }
+  .proyects .proyectTwo {
+    width: 50%; }
+  .proyects .proyectThree {
+    width: 50%; }
+  .proyects .card {
+    margin: 1%; }
+    .proyects .card .card-body {
+      padding: 1%; }
+      .proyects .card .card-body h5 {
+        font-size: 30px; } }
+
+/*-----SMARTPHONE-----*/
+@media (max-width: 480px) {
+  h3 {
+    font-size: 30px;
+    margin: 5%; }
+  .proyects .proyectOne {
+    width: 100%; }
+  .proyects .proyectTwo {
+    width: 50%; }
+  .proyects .proyectThree {
+    width: 50%; }
+  .proyects .card {
+    margin: 1%; }
+    .proyects .card .card-body {
+      padding: 1%; } }
+
+.gear {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .gear #column1 {
+    animation: column1 0.5s;
+    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
+
+@keyframes column1 {
+  0% {
+    transform: translateY(-300vh); } }
+  .gear #column2 {
+    animation: column2 1s;
+    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
+
+@keyframes column2 {
+  0% {
+    transform: translateY(-300vh); } }
+  .gear #column3 {
+    animation: column3 1.5s;
+    animation-timing-function: cubic-bezier(0, 0.16, 0.57, 1.4); }
+
+@keyframes column3 {
+  0% {
+    transform: translateY(-300vh); } }
+  .gear .gearColumn {
+    width: 30%;
+    display: flex;
+    flex-flow: column wrap; }
+    .gear .gearColumn .gearDiv {
+      margin: 5px;
+      padding: 5px;
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      animation: gearAnim 1s; }
+
+@keyframes gearAnim {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+      .gear .gearColumn .gearDiv .accordion-item {
+        background-color: rgba(0, 0, 0, 0); }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-button {
+          margin: 0;
+          background-color: rgba(0, 0, 0, 0); }
+          .gear .gearColumn .gearDiv .accordion-item .accordion-button .gearImg {
+            height: auto;
+            width: 95%; }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-button:hover {
+          transition: 0.2s ease;
+          z-index: 1;
+          transform: scale(1.05, 1.05); }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-button:not(.collapsed) h5 {
+          color: #247eb9; }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-body {
+          margin: 0;
+          width: 95%;
+          text-align: center;
+          font-family: "Quicksand", sans-serif;
+          color: #247eb9;
+          font-weight: bold;
+          border: solid 3px #b9247d71;
+          border-radius: 10px; }
+          .gear .gearColumn .gearDiv .accordion-item .accordion-body strong {
+            color: #b9247dd7;
+            text-decoration: double underline #247eb9; }
+
+/*-----TABLET-----*/
+@media (min-width: 481px) and (max-width: 1024px) {
+  .accordion-body {
+    font-size: 14px; } }
+
+/* SMARTPHONE */
+@media (max-width: 480px) {
+  h3 {
+    font-size: 30px !important;
+    margin: 5%; }
+  h4 {
+    font-size: 20px !important; }
+  .gear {
+    flex-flow: column; }
+    .gear .gearColumn {
+      width: 100%; }
+      .gear .gearColumn .gearDiv {
+        margin: 0; }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-button .gearImg {
+          width: 80%; }
+        .gear .gearColumn .gearDiv .accordion-item .accordion-body {
+          font-size: 14px; } }
+
+/* DESKTOP */
+.team {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+  .team h4 {
+    width: 90%; }
+  .team .accordion {
+    margin: 1%;
+    width: 90%; }
+    .team .accordion .accordion-item {
+      margin: 1% 0 2% 0;
+      align-self: center;
+      background-color: black;
+      border: solid 2px #247eb9;
+      border-radius: 20px; }
+      .team .accordion .accordion-item .accordion-button {
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0); }
+        .team .accordion .accordion-item .accordion-button .teamImg {
+          margin: 2% 1%;
+          width: 55%;
+          height: auto;
+          border-radius: 15px; }
+      .team .accordion .accordion-item .accordion-button:not(.collapsed) h5 {
+        text-decoration: underline #247eb9; }
+      .team .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b9247dd7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+      .team .accordion .accordion-item .accordion-button::after {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 1%;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23247eb9'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        background-size: 2.25rem; }
+      .team .accordion .accordion-item .accordion-body {
+        margin: 0;
+        padding-top: 0;
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+        color: #247eb9;
+        font-weight: bolder; }
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .team .accordion .accordion-item .accordion-button .teamImg {
+    width: 65%;
+    height: auto; }
+  .team .accordion .accordion-item .accordion-body {
+    font-size: 16px; } }
+
+/* SMARTPHONE */
+@media (max-width: 480px) {
+  .team .accordion .accordion-item .accordion-button .teamImg {
+    width: 75%;
+    height: auto; }
+  .team .accordion .accordion-item .accordion-body {
+    font-size: 12px; } }
+
+.formContact {
+  padding: 2%; }
+  .formContact #fieldContact {
+    background-color: #000000d5;
+    border-color: #247eb9;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #b9247dd7; }
+    .formContact #fieldContact input:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill, .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill, .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill,
+    .formContact #fieldContact input:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
+    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
+    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:hover,
+    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:hover,
+    .formContact #fieldContact input:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
+    #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
+    .formContact #fieldContact #contactDiv #serviceInput select:-webkit-autofill:focus,
+    .formContact #fieldContact #contactDiv #descriptionInput textarea:-webkit-autofill:focus,
+    .formContact #fieldContact textarea:-webkit-autofill,
+    .formContact #fieldContact textarea:-webkit-autofill:hover,
+    .formContact #fieldContact textarea:-webkit-autofill:focus,
+    .formContact #fieldContact select:-webkit-autofill,
+    .formContact #fieldContact select:-webkit-autofill:hover,
+    .formContact #fieldContact select:-webkit-autofill:focus {
+      -webkit-text-fill-color: #b9247dd7;
+      box-shadow: 0 0 0px 1000px black inset; }
+    .formContact #fieldContact input:focus, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select:focus, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea:focus, .formContact #fieldContact #contactDiv #serviceInput select:focus, .formContact #fieldContact #contactDiv #descriptionInput textarea:focus,
+    .formContact #fieldContact textarea:focus,
+    .formContact #fieldContact select:focus {
+      outline: 3px solid #b9247d71; }
+    .formContact #fieldContact legend {
+      padding: 5px;
+      margin: 0 50px;
+      font-family: "Righteous", cursive;
+      font-size: 30px;
+      text-align: left;
+      color: #247eb9; }
+    .formContact #fieldContact #contactDiv {
+      display: grid;
+      grid-template-areas: "fName lName" "email phone" "service service" "description description" "subscription subscription" "none send"; }
+      .formContact #fieldContact #contactDiv label {
+        padding: 5px 40px; }
+      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        margin: 5px 20px;
+        padding: 1%;
+        height: 45px;
+        font-family: "Quicksand", sans-serif;
+        font-size: 18px;
+        color: #b9247dd7;
+        font-weight: bolder;
+        background-color: #00000000;
+        border: solid 2px #247eb9;
+        border-radius: 5px; }
+      .formContact #fieldContact #contactDiv #fNameInput {
+        grid-area: fName;
+        display: flex;
+        flex-flow: column wrap; }
+      .formContact #fieldContact #contactDiv #lNameInput {
+        grid-area: lName;
+        display: flex;
+        flex-flow: column wrap; }
+      .formContact #fieldContact #contactDiv #emailInput {
+        grid-area: email;
+        display: flex;
+        flex-flow: column wrap; }
+      .formContact #fieldContact #contactDiv #phoneInput {
+        grid-area: phone;
+        display: flex;
+        flex-flow: column wrap; }
+      .formContact #fieldContact #contactDiv #serviceInput {
+        margin: 2% 0 0 0;
+        grid-area: service;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center; }
+        .formContact #fieldContact #contactDiv #serviceInput select {
+          margin: 5px;
+          padding: 0;
+          height: 35px;
+          width: 60%;
+          font-size: 16px; }
+          .formContact #fieldContact #contactDiv #serviceInput select option {
+            background-color: black;
+            font-weight: bolder; }
+      .formContact #fieldContact #contactDiv #descriptionInput {
+        grid-area: description;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center; }
+        .formContact #fieldContact #contactDiv #descriptionInput textarea {
+          margin: 5px;
+          width: 60%;
+          height: auto; }
+      .formContact #fieldContact #contactDiv #subInput {
+        margin: 2% 20%;
+        grid-area: subscription;
+        display: flex;
+        flex-flow: row-reverse wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px #247eb9;
+        border-radius: 5px; }
+        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+          margin: 0 5px;
+          align-self: center; }
+        .formContact #fieldContact #contactDiv #subInput #subLabel {
+          padding: 0 1%;
+          font-size: 16px;
+          text-align: center; }
+      .formContact #fieldContact #contactDiv #sendInput {
+        padding: 1% 3% 3% 0;
+        grid-area: send;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: end; }
+        .formContact #fieldContact #contactDiv #sendInput #sendButton {
+          width: 200px;
+          height: 50px;
+          background-color: #247db9dc;
+          border: solid 2px #b9247dd7;
+          font-family: "Righteous", cursive;
+          font-size: 26px;
+          color: #b9247dd7;
+          text-shadow: 1px 1px 1px black;
+          transition: 0.3s ease-in-out; }
+        .formContact #fieldContact #contactDiv #sendInput #aSendButton :hover {
+          background-color: #b9247d71;
+          border: solid 2px #247eb9;
+          color: #247eb9; }
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .formContact #fieldContact {
+    font-size: 16px; }
+    .formContact #fieldContact legend {
+      font-size: 24px; }
+    .formContact #fieldContact #contactDiv {
+      display: grid;
+      grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
+      .formContact #fieldContact #contactDiv label {
+        padding: 1% 5%; }
+      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        margin: 5px 5%;
+        padding: 0 3px;
+        height: 35px;
+        font-size: 14px; }
+      .formContact #fieldContact #contactDiv #serviceInput select {
+        padding: 0 3px;
+        height: 30px;
+        width: 80%;
+        font-size: 11px; }
+      .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        padding: 5px;
+        height: 80px;
+        width: 80%;
+        font-size: 14px; }
+      .formContact #fieldContact #contactDiv #subInput {
+        margin: 2% 10%; }
+        .formContact #fieldContact #contactDiv #subInput #subLabel {
+          font-size: 12px; }
+      .formContact #fieldContact #contactDiv #sendInput #sendButton {
+        margin: 10px;
+        padding: 5px;
+        width: 180px;
+        height: 40px;
+        font-size: 18px; } }
+
+/* SMARTPHONE */
+@media (max-width: 480px) {
+  .formContact #fieldContact {
+    font-size: 16px; }
+    .formContact #fieldContact legend {
+      margin: 0 15px;
+      font-size: 24px; }
+    .formContact #fieldContact #contactDiv {
+      display: grid;
+      grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
+      .formContact #fieldContact #contactDiv label {
+        padding: 3px 15px;
+        text-align: center; }
+      .formContact #fieldContact #contactDiv input, #contactIndex .formContact #fieldContact #contactDiv #serviceInput select, #contactIndex .formContact #fieldContact #contactDiv #descriptionInput textarea, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        margin: 8px;
+        padding: 5px;
+        height: 30px;
+        width: 80%;
+        font-size: 14px;
+        align-self: center; }
+      .formContact #fieldContact #contactDiv #serviceInput select {
+        padding: 0 5px;
+        width: 80%;
+        height: 30px;
+        font-size: 14px; }
+      .formContact #fieldContact #contactDiv #descriptionInput textarea {
+        margin: 8px;
+        height: 80px;
+        width: 80%;
+        font-size: 14px; }
+      .formContact #fieldContact #contactDiv #subInput {
+        margin: 8px 10%; }
+        .formContact #fieldContact #contactDiv #subInput #subLabel {
+          padding: 0 10px;
+          font-size: 12px;
+          text-align: center; }
+        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+          width: 12px; }
+      .formContact #fieldContact #contactDiv #sendInput {
+        justify-content: center; }
+        .formContact #fieldContact #contactDiv #sendInput #sendButton {
+          margin: 10px;
+          padding: 5px;
+          height: 50px;
+          width: 150px;
+          font-size: 22px; } }
+
+/* FOOTER */
+footer {
+  height: 6%;
+  background-color: black;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #b9247dd7;
+  text-align: center; }
+  footer #profileLink {
+    color: #247eb9; }
+  footer #profileLink:hover {
+    color: #247eb9;
+    text-decoration: underline;
+    text-decoration-color: #b9247dd7; }
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1024px) {
+  footer {
+    font-size: 12px;
+    font-weight: bolder; } }
+
+/* SMARTPHONE */
+@media (max-width: 480px) {
+  /*------NAV-----*/
+  header #navFlex {
+    height: 6vh;
+    position: static; }
+    header #navFlex .aBrand {
+      font-size: 20px; }
+    header #navFlex .menuItem {
+      font-size: 12px; }
   footer {
     font-size: 10px;
     font-weight: bolder; } }

@@ -1,106 +1,101 @@
 //MAP//
 
 $colors: (
-    pink: $pink,
-    blue: $blue
+  pink: $pink,
+  blue: $blue,
 );
 
-
 @each $name-color, $color in $colors {
-    .h-#{$name-color}{
-        color:$color;
-    }
+  .h-#{$name-color} {
+    color: $color;
+  }
 }
 
 $font-sizing: (
-    normal: 16px,
-    brand: 22px,
-    legend: 30px,
-    input: 18px
+  normal: 16px,
+  brand: 22px,
+  legend: 30px,
+  input: 18px,
 );
 
 @each $name-size, $size in $font-sizing {
-    .size-#{$name-size}{
-        font-size:$size;
-    }
+  .size-#{$name-size} {
+    font-size: $size;
+  }
 }
 
-
-
 $headings: (
-    slogan: 18vh,
-    description: 14vh,
-    pageTitle: 6vh,
-    subtitle: 4vh,
-    itemTitle: 3vh
+  slogan: 18vh,
+  description: 14vh,
+  pageTitle: 6vh,
+  subtitle: 4vh,
+  itemTitle: 3vh,
 );
 
 @each $name-heading, $size in $headings {
-    .h-#{$name-heading}{
-        font-size: $size;
-    }
+  .h-#{$name-heading} {
+    font-size: $size;
+  }
 }
 
 $headings: (
-    slogan: $pink,
-    description: $pink,
-    pageTitle: $pink,
-    subtitle: $blue,
-    itemTitle: $pink
+  slogan: $pink,
+  description: $pink,
+  pageTitle: $pink,
+  subtitle: $blue,
+  itemTitle: $pink,
 );
 
 @each $name-heading, $h-color in $headings {
-    .h-#{$name-heading}{
-        color: $h-color;
-    }
+  .h-#{$name-heading} {
+    color: $h-color;
+  }
 }
 
 $headings: (
-    slogan: $mainFont,
-    description: $mainFont,
-    pageTitle: $mainFont,
-    subtitle: $mainFont,
-    itemTitle: $mainFont
+  slogan: $mainFont,
+  description: $mainFont,
+  pageTitle: $mainFont,
+  subtitle: $mainFont,
+  itemTitle: $mainFont,
 );
 
 @each $name-heading, $h-font in $headings {
-    .h-#{$name-heading}{
-        font-family: $h-font;
-    }
+  .h-#{$name-heading} {
+    font-family: $h-font;
+  }
 }
 
 $headings: (
-    pageTitle: 3px 3px 5px #b9247d69,
-    subtitle: 1px 1px 2px #247eb9,
-
+  pageTitle: 3px 3px 5px #b9247d69,
+  subtitle: 1px 1px 2px #247eb9,
 );
 
 @each $name-heading, $h-shadow in $headings {
-    .h-#{$name-heading}{
-        text-shadow: $h-shadow;
-    }
+  .h-#{$name-heading} {
+    text-shadow: $h-shadow;
+  }
 }
 
 $headings: (
-    pageTitle: 1%,
-    subtitle: 1%,
-    itemTitle: 1% 0
+  pageTitle: 1%,
+  subtitle: 1%,
+  itemTitle: 1% 0,
 );
 
 @each $name-heading, $h-margin in $headings {
-    .h-#{$name-heading}{
-        margin: $h-margin;
-    }
+  .h-#{$name-heading} {
+    margin: $h-margin;
+  }
 }
 
 $headings: (
-    pageTitle: center,
-    subtitle: center,
-
+  pageTitle: center,
+  subtitle: center,
 );
 
 @each $name-heading, $h-align in $headings {
-    .h-#{$name-heading}{
-        text-align: $h-align;
-    }
+  .h-#{$name-heading} {
+    text-align: $h-align;
+  }
 }

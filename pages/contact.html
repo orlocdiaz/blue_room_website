@@ -1,129 +1,143 @@
 <!DOCTYPE html>
 <html>
-    
-<head>
-    <title>Contact - Blue Room Studio</title>
-    <meta name="keywords" content="recording studio, audio, sound, music production, contact">
-    <meta name="description" content="Contact us on our social media or send us your info and we will get back at you">
 
-    <link rel="shortcut icon" href="../content/ricklogo.png">
-    <link rel="stylesheet" href="../estilos/bootstrap.css">
-    <link rel="stylesheet" href="../estilos/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Contact - Blue Room Studio</title>
+  <meta name="keywords" content="recording studio, audio, sound, music production, contact">
+  <meta name="description" content="Contact us on our social media or send us your info and we will get back at you">
+
+  <link rel="shortcut icon" href="../content/ricklogo.png">
+  <link rel="stylesheet" href="../estilos/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Righteous&display=swap');
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-<!----------------MENU------------------------->
-    <header class="header">
+<body id="bodyContact">
+  <!----------------MENU------------------------->
+  <header class="header">
 
-        <nav class="navbar navbar-expand-lg" id="navFlex">
-            <div class="container-fluid">
-                <a class="navbar-brand aBrand" href="../index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones" viewBox="0 0 16 16">
-                        <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
-                      </svg>
-                      Blue Room
-                  </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                  </svg></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
-                    <li class="nav-item, menuItem">
-                        <a class="nav-link active aMenuItem" aria-current="page" href="../index.html">Home</a>
-                      </li>
-                      <li class="nav-item, menuItem">
-                        <a class="nav-link active aMenuItem" aria-current="page" href="./proyects.html">Proyects</a>
-                      </li>
-                      <li class="nav-item, menuItem">
-                        <a class="nav-link active aMenuItem" aria-current="page" href="./studio.html">Studio</a>
-                      </li>
-                      <li class="nav-item, menuItem">
-                        <a class="nav-link active aMenuItem" aria-current="page" href="./about_us.html">About Us</a>
-                      </li>
-                      <li class="nav-item, menuItem">
-                        <a class="nav-link active aMenuItem" aria-current="page" href="./contact.html">Contact</a>
-                      </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-<!-----------------CONTACT FORM------------------------>
-    <form class="formContact">
-        <h3>Contact Us</h3>
-
-        <fieldset id="fieldContact">
-            <legend>Contact Information</legend>
-
-        <div id="contactDiv">
-
-            <div id="fNameInput">
-                <label for="firstname">First Name</label>
-                    <input type="text" name="firstname">
-            </div>
-
-            <div id="lNameInput">
-                <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname">
-            </div>
-
-            <div id="emailInput">
-                <label for="email">Email</label>
-                    <input type="email" name="email">
-            </div>
-
-            <div id="phoneInput">
-                <label for="phone">Phone</label>
-                    <input type="phone" name="phone">
-            </div>
-
-            <div id="serviceInput">
-                <label for="service">Select Service</label>
-                    <select name="service">
-                        <option value="none">None</option>
-                        <option value="recording">Recording</option>
-                        <option value="mixing">Mixing</option>
-                        <option value="master">Mastering</option>
-                        <option value="rec-mix">Recording/Mixing</option>
-                        <option value="mix-mas">Mixing/Mastering</option>
-                        <option value="rec-mix-mas">Recording/Mixing/Mastering</option>
-                        <option value="other">Other service</option>
-                    </select>
-            </div>
-
-            <div id="descriptionInput">
-                <label for="aboutProyect" class="centerLabel">Brief description about your proyect:</label>
-                <textarea name="aboutProyect" rows="5"></textarea>
-            </div>
-
-            <div id="subInput">
-                <input type="checkbox" name="sub-email" value="1" id="subCheckbox">
-                <label for="sub-email" id="subLabel">Subscribe to our newsletter and recieve offers for your next proyect</label>
-            </div>
-
-            <div id="sendInput">
-                <a href="#" id="aSendButton">
-                    <input type="submit" value="Send" name="send" id="sendButton">
-                </a>
-            </div>
-
+    <nav class="navbar navbar-expand-lg" id="navFlex">
+      <div class="container-fluid">
+        <a class="navbar-brand aBrand" href="../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" fill="#247eb9" class="bi bi-headphones"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z" />
+          </svg>
+          Blue Room
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#b9247dd7" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0, ulMenu">
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./proyects.html">Proyects</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./studio.html">Studio</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./about_us.html">About Us</a>
+            </li>
+            <li class="nav-item, menuItem">
+              <a class="nav-link active aMenuItem" aria-current="page" href="./contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-        </fieldset>
-    </form>
-<!-----------------FOOTER------------------------>
-    <footer clas="footerFlex">    
-        <hr id="hrfooter">
-        &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos" target="blank" id="profileLink">Orlando Díaz</a>
-    </footer></body>
+      </div>
+    </nav>
+  </header>
+  <!-----------------CONTACT FORM------------------------>
+  <h3 class="h-pageTitle">Contact Us</h3>
 
-<!--Script Bootsrap-->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <form class="formContact">
+
+    <fieldset id="fieldContact">
+      <legend>Contact Information</legend>
+
+      <div id="contactDiv">
+
+        <div id="fNameInput">
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname">
+        </div>
+
+        <div id="lNameInput">
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname">
+        </div>
+
+        <div id="emailInput">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+        </div>
+
+        <div id="phoneInput">
+          <label for="phone">Phone</label>
+          <input type="phone" name="phone">
+        </div>
+
+        <div id="serviceInput">
+          <label for="service">Select Service</label>
+          <select name="service">
+            <option value="none">None</option>
+            <option value="recording">Recording</option>
+            <option value="mixing">Mixing</option>
+            <option value="master">Mastering</option>
+            <option value="rec-mix">Recording/Mixing</option>
+            <option value="mix-mas">Mixing/Mastering</option>
+            <option value="rec-mix-mas">Recording/Mixing/Mastering</option>
+            <option value="other">Other service</option>
+          </select>
+        </div>
+
+        <div id="descriptionInput">
+          <label for="aboutProyect" class="centerLabel">Brief description about your proyect:</label>
+          <textarea name="aboutProyect" rows="5"></textarea>
+        </div>
+
+        <div id="subInput">
+          <input type="checkbox" name="sub-email" value="1" id="subCheckbox">
+          <label for="sub-email" id="subLabel">Subscribe to our newsletter and recieve offers for your next
+            proyect</label>
+        </div>
+
+        <div id="sendInput">
+          <a href="#" id="aSendButton">
+            <input type="submit" value="Send" name="send" id="sendButton">
+          </a>
+        </div>
+
+      </div>
+    </fieldset>
+  </form>
+  <!-----------------FOOTER------------------------>
+  <footer clas="footerFlex">
+    <hr id="hrfooter">
+    &copy;2021 - Blue Room Studio - Designed & Developed by <a href="https://plataforma.coderhouse.com/cursos"
+      target="blank" id="profileLink">Orlando Díaz</a>
+  </footer>
+
+  <!--Script Bootsrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
 
 </body>
+
+</html>

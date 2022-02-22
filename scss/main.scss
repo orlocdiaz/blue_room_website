@@ -1,609 +1,195 @@
-
 @import "colors";
 @import "fonts";
 @import "mixins";
 @import "maps";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
+  width: 5px;
+}
+
 ::-webkit-scrollbar-track {
-    background: $black;
+  background: $black;
 }
-  
+
 ::-webkit-scrollbar-thumb {
-    background: $blue;
-    border-radius: 5px;
+  background: $blue;
+  border-radius: 5px;
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
-    background: $pink;
+  background: $pink;
 }
 
 /* GENERAL */
-body{
-    background-color: $black;
-    min-height: 100vh;
+body {
+  background-color: $black;
+  min-height: 100vh;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-hr{
-    background-color: $blue;
-    border-top: 1px solid $blue;
-    border-bottom: 1px solid $blue;
-    border-top-left-radius: 5px;
-    box-shadow: 0px 0px 5px #38a9f5ee, 
-    0px 0px 10px #6cc2fc, 
-    0px 0px 20px #97d2fa;
+hr {
+  background-color: $blue;
+  border-top: 1px solid $blue;
+  border-bottom: 1px solid $blue;
+  border-top-left-radius: 5px;
+  box-shadow: 0px 0px 5px #38a9f5ee, 0px 0px 10px #6cc2fc, 0px 0px 20px #97d2fa;
 
-    animation: hrAnim 1s ease-out;
+  animation: hrAnim 1s ease-out;
 
-    @keyframes hrAnim{
-        0% {transform:scaleX(.1)}
-        100% {transform: scalex(1) ;}
+  @keyframes hrAnim {
+    0% {
+      transform: scaleX(0.1);
     }
+    100% {
+      transform: scalex(1);
+    }
+  }
 }
 
 /* NAV */
 
-header{
-    height: 10vh;
-    
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+header {
+  height: 10vh;
 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  z-index: 2;
+
+  #navFlex {
+    height: 10vh;
+    width: 100%;
+
+    /* background-image: url(../content/tex_wav.png); */
+    background-color: $black;
+    background-size: 25%;
+    background-position: center;
+    background-repeat: repeat-x;
+
+    position: fixed;
     z-index: 2;
 
-    #navFlex{
-        height: 10vh;
-        width: 100%;    
-        
-        /* background-image: url(../content/tex_wav.png); */
-        background-color: $black;
-        background-size: 25%;
-        background-position: center;
-        background-repeat: repeat-x;
-        
-        position: fixed;
-        z-index: 2;
+    .aBrand {
+      font-family: $mainFont;
+      color: $pink;
+      font-size: 30px;
 
-        .aBrand{
-            font-family: $mainFont;
-            color: $pink;
-            font-size: 30px;
-            
-            transition: ease-in-out .2s;
-        }
-
-        .aBrand:hover{
-            color: $blue;
-        }
-
-        ul{
-            margin: 0;
-            padding: 1%;
-        }
-        
-        .ulMenu{    
-            background-color: $black;
-
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-end;
-            align-items: center;
-            flex-grow: 2;
-
-            .menuItem{
-                padding: 0 2%;
-            
-                border-right: solid 0.5px $blue;
-                
-                .aMenuItem{
-                    font-family: $secondaryFont;
-                    color: $pink;
-                    font-weight: bolder;
-                    list-style: none;
-                    box-sizing: content-box;
-                
-                    transition: ease-in-out .2s;
-                }
-                
-                .aMenuItem:hover{
-                    color:$blue;
-                    text-decoration: underline;
-                }
-            }
-        }
+      transition: ease-in-out 0.2s;
     }
+
+    .aBrand:hover {
+      color: $blue;
+    }
+
+    ul {
+      margin: 0;
+      padding: 1%;
+    }
+
+    .ulMenu {
+      background-color: $black;
+
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 2;
+
+      .menuItem {
+        padding: 0 2%;
+
+        border-right: solid 0.5px $blue;
+
+        .aMenuItem {
+          font-family: $secondaryFont;
+          color: $pink;
+          font-weight: bolder;
+          list-style: none;
+          box-sizing: content-box;
+
+          transition: ease-in-out 0.2s;
+        }
+
+        .aMenuItem:hover {
+          color: $blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
-/* INDEX */
-
-.mainFlex{
-    flex-flow: row wrap;
-
-    #slogan{
-        width: 100%;
-        height: 89vh;
-    
-        background-image: url(../content/dibujo4.png);
-        background-position: center ;
-        background-size: cover;
-        background-repeat: no-repeat;
-    
-        display:flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-content: flex-start;
-
-        h1{
-            padding: 2%;
-            padding-right: 0;
-            box-sizing: border-box;
-        
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-
-            #sloganTxt{
-                animation: slogan 5s 2 forwards;
-                animation-timing-function: cubic-bezier(.3,1.36,.72,-0.31);
-            
-            @keyframes slogan {
-                0% { color: $transparent;  
-                    text-shadow: 0 0 0 $transparent; }
-                10% { color: $pink;
-                    text-shadow: 0 0 5px $veryTransparentPink; }
-                20% { color: $pink; }
-                25% { text-shadow: 0 0 5px $mediumTransparentPink; }
-                30% { color: $transparent; }
-                40% { color: $pink; }
-                50% { color: $transparent; 
-                    text-shadow: 0 0 5px $shinyPink 0 0 3px $shinyPink2; }
-                60% { color: $pink;}
-                70% { color: $transparent;}
-                75% { text-shadow: 0 0 5px $mediumTransparentPink }
-                80% { color: $pink;}
-                90% { color: $transparent; 
-                    text-shadow: 0 0 5px $veryTransparentPink; }
-                95% { color: $mediumTransparentPink; 
-                    text-shadow: 0 0 5px $veryTransparentPink; }
-                100% { color: $pink;
-                    text-shadow: 0 0 0 $transparent }
-            }
-            
-            
-            .highlight{
-                color: $transparentBlue ;
-                text-shadow:  5px 5px 0px $pink;
-            }
-
-            #spanOne::before {
-                animation: wordOne 10s linear;
-                content: "";
-                animation-fill-mode: forwards;
-                animation-delay: 0s;
-            
-                @keyframes wordOne {
-                    0% { content: "it"; 
-                        color: $transparent;
-                        text-shadow:  5px 5px 0px $transparent; }
-                    10% { color: $transparentBlue ;
-                        text-shadow:  5px 5px 0px $pink; }
-                    20% { content: "it";
-                        color: $transparentBlue ;
-                        text-shadow:  5px 5px 0px $pink; }
-                    30% { color: $transparent;
-                        text-shadow:  5px 5px 0px $transparent; }
-                    40% { content: "proyects"; 
-                        color: $transparentBlue ;
-                        text-shadow:  5px 5px 0px $pink; }
-                    50% { color: $transparent ;
-                        text-shadow:  5px 5px 0px $transparent; }
-                    60% { content: "ideas";
-                        color: $transparentBlue ;
-                        text-shadow:  5px 5px 0px $pink; }
-                    70% { color: $transparent;
-                        text-shadow:  5px 5px 0px $transparent; }
-                    80% { content: "everything";
-                        color: $transparentBlue;
-                        text-shadow:  5px 5px 0px $pink; }
-                    90% { color: $transparent;
-                        text-shadow:  5px 5px 0px $transparent; }
-                    100% { content: "you";
-                        color: $transparentBlue;
-                        text-shadow:  5px 5px 0px $pink; }
-                }
-            }
-
-            #spanTwo{
-                animation: moveTwo 1s;
-                display: inline-block;
-                animation-delay: 11s;
-            
-            @keyframes moveTwo{
-                5% { transform: rotate(5deg);}
-                10% { transform: rotate(-5deg);}
-                15% { transform: rotate(5deg);}
-                20% { transform: rotate(-5deg);}
-                25% { transform: rotate(5deg);}
-                30% { transform: rotate(-5deg);}
-                35% { transform: rotate(5deg);}
-                40% { transform: rotate(-5deg);}
-                45% { transform: rotate(0deg);}
-                100% { transform: rotate(0deg);}
-            }
-            }
-        }
-    }
-
-
-    
-    #description{
-        background-image: linear-gradient(#247db92d, $transparent, #247db92d),
-        linear-gradient(90deg, $black 10%, $veryTransparentPink);
-
-        background-size: 120% 100%;
-        animation: desc 10s ease infinite;
-        height: 100%;
-    
-    
-    @keyframes desc {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: flex-end;
-
-        .descTxt{
-            padding: 2%;
-        
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        
-            text-align: end;
-
-            #desc1{
-                background-color: $pink;
-            
-                color: $transparentBlue;
-            }
-            
-            #desc2{
-                color: $transparentBlue ;
-                text-shadow: 5px 5px 1px $pink;
-            }
-            
-            #desc3{
-                background-color: $transparentBlue;
-                border-radius: 20px;
-            }
-            
-            #biggerDesc{
-                font-size: 24vh;
-                color: $transparentBlue;
-            
-                display: inline-block;
-            }
-            
-            #coolerDesc{
-                font-variant: small-caps;
-                font-size: 18vh;
-                text-shadow: -1px -1px 1px $blue;
-            
-                animation: coolerAnim 5s infinite;
-            }
-            
-            @keyframes coolerAnim{
-                5% {text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink;}
-                10% {text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue;}
-                15% {text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink;}
-                20% {text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue;}
-                25% {text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink;}
-                30% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue;}
-                35% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue, -15px -15px 15px $solidPink;}
-                40% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue, -15px -15px 15px $mediumTransparentPink;}
-                45% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue, -15px -15px 15px $solidPink;}
-                50% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue, -15px -15px 15px $mediumTransparentPink;}
-                85% { text-shadow: -1px -1px 1px $blue, -3px -3px 1px $solidPink, -5px -5px 1px $blue, -7px -7px 1px $solidPink, -9px -9px 1px $blue, -11px -11px 1px $solidPink, -13px -13px 1px $blue, -15px -15px 15px $mediumTransparentPink;}
-            }
-        }
-    }
-}
-
-/* CAROUSEL INDEX */
-
-.carouselIndex:hover #divCarouselCaption{
-    opacity: 1;
-}
-
-#divCarouselCaption{
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: #00000098;
-
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    
-    transition: 0.5s ease-in-out;
-
-    #carouselCaption{
-        padding: 3%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        font-size: 14vh;
-    
-        border: solid 10px $blue;
-        border-radius: 20px;
-    }
-}
-
-/* CONTACT INDEX */
-
-
-.formContact{
-    padding: 2%;
-
-    /* background-image: url(../content/miclights.jpg); */
-    background: linear-gradient(45deg, $mediumTransparentPink, $transparentBlue, $mediumTransparentPink, $transparentBlue);
-	background-size: 400% 100%;
-    height: 100%;
-	animation: gradient 15s ease infinite;
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-}
-
-    #fieldContact{
-        background-color: $mediumTransparentBlack;
-        border-color: $blue;
-        border-radius: 20px;
-    
-        font-family: $secondaryFont;
-        font-size: 20px;
-        font-weight: bold;
-        color: $pink;
-
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
-        -webkit-text-fill-color: $pink    ;
-        box-shadow: 0 0 0px 1000px $black inset;
-        }
-
-        input:focus, textarea:focus, select:focus{
-            outline: 3px solid $veryTransparentPink;
-        }
-
-        legend{
-            padding: 5px;
-            margin: 0 50px;
-        
-            font-family: $mainFont;
-            font-size: 30px;
-            text-align: left;
-            color: $blue;
-        }
-
-        #contactDiv{
-            display: grid;
-            grid-template-areas:
-            "fName lName"
-            "email phone"
-            "service service"
-            "description description"
-            "subscription subscription"
-            "none send";
-
-            label{
-                padding: 5px 40px;
-            }
-            
-            input{
-                margin: 5px 20px;
-                padding: 1%;
-                height: 45px;
-            
-                font-family: $secondaryFont;
-                font-size: 18px;
-                color: $pink;
-                font-weight: bolder;
-            
-                background-color: $transparent;
-                border: solid 2px $blue;
-                border-radius: 5px;
-            }
-
-            #fNameInput{
-                grid-area: fName;
-            
-                @include contactInputs;
-            }
-
-            #lNameInput{
-                grid-area: lName;
-            
-                @include contactInputs;
-            }
-            
-            #emailInput{
-                grid-area: email;
-            
-                @include contactInputs;
-            }
-            
-            #phoneInput{
-                grid-area: phone;
-            
-                @include contactInputs;
-            }
-            
-            #serviceInput{
-                margin: 2% 0 0 0;
-            
-                grid-area: service;
-            
-                @include contactInputs;
-                align-items: center;
-
-                select{
-                    @extend input;
-                    margin: 5px;
-                    padding: 0; 
-                    height: 35px;
-                    width: 60%;
-                
-                    font-size: 16px;
-
-                    option{
-                        background-color: $black;
-                        font-weight: bolder;
-                    }
-                }
-            }
-            
-            #descriptionInput{
-                grid-area: description;
-            
-                @include contactInputs;
-                align-items: center;
-
-                textarea{
-                    @extend input;
-                    margin: 5px;
-                    width: 60%;
-                    height: auto;
-                }
-            }
-            
-            #subInput{
-                margin: 2% 20%;
-            
-                grid-area: subscription;
-            
-                display: flex;
-                flex-flow: row-reverse wrap-reverse;
-                justify-content: center;
-                align-items: center;
-            
-                border: solid 2px $blue;
-                border-radius: 5px;
-
-                #subCheckbox{
-                    margin: 0 5px;
-                
-                    align-self: center;
-                }
-
-                #subLabel{
-                    padding: 0 1%;
-                
-                    font-size: 16px;
-                    text-align: center;
-                }
-            }
-            
-            #sendInput{
-                padding: 1% 3% 3% 0;
-                grid-area: send;
-            
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: end;
-
-                #sendButton{
-                    width: 200px;
-                    height: 50px;
-                
-                    background-color: $slightlyTransparentBlue;
-                    border: solid 2px $pink;
-                
-                    font-family: $mainFont;
-                    font-size: 26px;
-                    color: $pink;
-                    text-shadow: 1px 1px 1px $black;
-                
-                    transition: .3s ease-in-out;
-                }
-                
-                #aSendButton :hover{
-                    background-color: $veryTransparentPink;
-                    border: solid 2px $blue;
-                
-                    color: $blue;
-                }
-            }
-        }
-    }
-}
-
-footer{
-    height: 6%;
-
-    background-color: $black;
-
-    font-family: $secondaryFont;
-    font-size:14px;
-    font-weight: bolder;
-    color: $pink;
-    text-align: center;
-
-    #profileLink{
-        color: $blue;
-    }
-
-    #profileLink:hover{
-        color:$blue;
-        text-decoration: underline;
-        text-decoration-color:$pink;
-    }
-}
-
+@import "index";
 @import "proyects";
 @import "studio";
-@import "media";
+@import "about_us";
+@import "contact";
+
+/* FOOTER */
+
+footer {
+  height: 6%;
+
+  background-color: $black;
+
+  font-family: $secondaryFont;
+  font-size: 14px;
+  font-weight: bolder;
+  color: $pink;
+  text-align: center;
+
+  #profileLink {
+    color: $blue;
+  }
+
+  #profileLink:hover {
+    color: $blue;
+    text-decoration: underline;
+    text-decoration-color: $pink;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  footer {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 480px) {
+  /*------NAV-----*/
+
+  header #navFlex {
+    height: 6vh;
+    position: static;
+
+    .aBrand {
+      font-size: 20px;
+    }
+
+    .menuItem {
+      font-size: 12px;
+    }
+  }
+
+  footer {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+}
