@@ -716,50 +716,52 @@ header {
       padding: 1%;
       font-size: 40px; }
   /*-----CONTACT-----*/
-  .formContact #fieldContact {
-    font-size: 16px; }
-    .formContact #fieldContact legend {
-      margin: 0 15px;
-      font-size: 24px; }
-    .formContact #fieldContact #contactDiv {
-      display: grid;
-      grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
-      .formContact #fieldContact #contactDiv label {
-        padding: 3px 15px;
-        text-align: center; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
-        margin: 8px;
-        padding: 5px;
-        height: 30px;
-        width: 80%;
-        font-size: 14px;
-        align-self: center; }
-      .formContact #fieldContact #contactDiv #serviceInput select {
-        padding: 0 5px;
-        width: 80%;
-        height: 30px;
-        font-size: 14px; }
-      .formContact #fieldContact #contactDiv #descriptionInput textarea {
-        margin: 8px;
-        height: 80px;
-        width: 80%;
-        font-size: 14px; }
-      .formContact #fieldContact #contactDiv #subInput {
-        margin: 8px 10%; }
-        .formContact #fieldContact #contactDiv #subInput #subLabel {
-          padding: 0 10px;
-          font-size: 12px;
+  .formContact {
+    padding: 3%; }
+    .formContact #fieldContact {
+      font-size: 16px; }
+      .formContact #fieldContact legend {
+        margin: 0 15px;
+        font-size: 24px; }
+      .formContact #fieldContact #contactDiv {
+        display: grid;
+        grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
+        .formContact #fieldContact #contactDiv label {
+          padding: 3px 15px;
           text-align: center; }
-        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
-          width: 12px; }
-      .formContact #fieldContact #contactDiv #sendInput {
-        justify-content: center; }
-        .formContact #fieldContact #contactDiv #sendInput #sendButton {
-          margin: 10px;
+        .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+          margin: 8px;
           padding: 5px;
-          height: 50px;
-          width: 150px;
-          font-size: 22px; } }
+          height: 30px;
+          width: 80%;
+          font-size: 14px;
+          align-self: center; }
+        .formContact #fieldContact #contactDiv #serviceInput select {
+          padding: 0 5px;
+          width: 80%;
+          height: 30px;
+          font-size: 14px; }
+        .formContact #fieldContact #contactDiv #descriptionInput textarea {
+          margin: 8px;
+          height: 80px;
+          width: 80%;
+          font-size: 14px; }
+        .formContact #fieldContact #contactDiv #subInput {
+          margin: 8px 10%; }
+          .formContact #fieldContact #contactDiv #subInput #subLabel {
+            padding: 0 10px;
+            font-size: 12px;
+            text-align: center; }
+          .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+            width: 12px; }
+        .formContact #fieldContact #contactDiv #sendInput {
+          justify-content: center; }
+          .formContact #fieldContact #contactDiv #sendInput #sendButton {
+            margin: 10px;
+            padding: 5px;
+            height: 50px;
+            width: 150px;
+            font-size: 22px; } }
 
 .proyects {
   margin: 2%;
@@ -934,7 +936,12 @@ header {
     width: 90%; }
   .team .accordion {
     margin: 1%;
-    width: 90%; }
+    width: 90%;
+    animation: teamAnim 1 1s ease; }
+
+@keyframes teamAnim {
+  0% {
+    transform: scale(0.5); } }
     .team .accordion .accordion-item {
       margin: 1% 0 2% 0;
       align-self: center;
@@ -1114,35 +1121,35 @@ header {
 
 /* TABLET */
 @media (min-width: 481px) and (max-width: 1024px) {
-  .formContact #fieldContact {
+  .formContactPage #fieldContact {
     font-size: 16px; }
-    .formContact #fieldContact legend {
+    .formContactPage #fieldContact legend {
       font-size: 24px; }
-    .formContact #fieldContact #contactDiv {
+    .formContactPage #fieldContact #contactDiv {
       display: grid;
       grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
-      .formContact #fieldContact #contactDiv label {
+      .formContactPage #fieldContact #contactDiv label {
         padding: 1% 5%; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContactPage #fieldContact #contactDiv input, .formContactPage #fieldContact #contactDiv #serviceInput select, .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
         margin: 5px 5%;
         padding: 0 3px;
         height: 35px;
         font-size: 14px; }
-      .formContact #fieldContact #contactDiv #serviceInput select {
+      .formContactPage #fieldContact #contactDiv #serviceInput select {
         padding: 0 3px;
         height: 30px;
         width: 80%;
         font-size: 11px; }
-      .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
         padding: 5px;
         height: 80px;
         width: 80%;
         font-size: 14px; }
-      .formContact #fieldContact #contactDiv #subInput {
+      .formContactPage #fieldContact #contactDiv #subInput {
         margin: 2% 10%; }
-        .formContact #fieldContact #contactDiv #subInput #subLabel {
+        .formContactPage #fieldContact #contactDiv #subInput #subLabel {
           font-size: 12px; }
-      .formContact #fieldContact #contactDiv #sendInput #sendButton {
+      .formContactPage #fieldContact #contactDiv #sendInput #sendButton {
         margin: 10px;
         padding: 5px;
         width: 180px;
@@ -1151,45 +1158,45 @@ header {
 
 /* SMARTPHONE */
 @media (max-width: 480px) {
-  .formContact #fieldContact {
+  .formContactPage #fieldContact {
     font-size: 16px; }
-    .formContact #fieldContact legend {
+    .formContactPage #fieldContact legend {
       margin: 0 15px;
       font-size: 24px; }
-    .formContact #fieldContact #contactDiv {
+    .formContactPage #fieldContact #contactDiv {
       display: grid;
       grid-template-areas: "fName" "lName" "email" "phone" "service" "description" "subscription" "send"; }
-      .formContact #fieldContact #contactDiv label {
+      .formContactPage #fieldContact #contactDiv label {
         padding: 3px 15px;
         text-align: center; }
-      .formContact #fieldContact #contactDiv input, .formContact #fieldContact #contactDiv #serviceInput select, .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContactPage #fieldContact #contactDiv input, .formContactPage #fieldContact #contactDiv #serviceInput select, .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
         margin: 8px;
         padding: 5px;
         height: 30px;
         width: 80%;
         font-size: 14px;
         align-self: center; }
-      .formContact #fieldContact #contactDiv #serviceInput select {
+      .formContactPage #fieldContact #contactDiv #serviceInput select {
         padding: 0 5px;
         width: 80%;
         height: 30px;
         font-size: 14px; }
-      .formContact #fieldContact #contactDiv #descriptionInput textarea {
+      .formContactPage #fieldContact #contactDiv #descriptionInput textarea {
         margin: 8px;
         height: 80px;
         width: 80%;
         font-size: 14px; }
-      .formContact #fieldContact #contactDiv #subInput {
+      .formContactPage #fieldContact #contactDiv #subInput {
         margin: 8px 10%; }
-        .formContact #fieldContact #contactDiv #subInput #subLabel {
+        .formContactPage #fieldContact #contactDiv #subInput #subLabel {
           padding: 0 10px;
           font-size: 12px;
           text-align: center; }
-        .formContact #fieldContact #contactDiv #subInput #subCheckbox {
+        .formContactPage #fieldContact #contactDiv #subInput #subCheckbox {
           width: 12px; }
-      .formContact #fieldContact #contactDiv #sendInput {
+      .formContactPage #fieldContact #contactDiv #sendInput {
         justify-content: center; }
-        .formContact #fieldContact #contactDiv #sendInput #sendButton {
+        .formContactPage #fieldContact #contactDiv #sendInput #sendButton {
           margin: 10px;
           padding: 5px;
           height: 50px;
@@ -1259,15 +1266,29 @@ footer {
     font-size: 12px;
     letter-spacing: .5px;
     grid-area: dev; }
+    footer .footerDev #devIcon {
+      margin: 5%;
+      width: 16px;
+      height: 16px; }
+    footer .footerDev #devIcon:hover {
+      color: #247eb9; }
 
 /* TABLET */
 @media (min-width: 481px) and (max-width: 1024px) {
   footer {
+    padding: 4% 0;
     font-size: 12px;
     font-weight: bolder; }
-    footer #footerLinkIcon {
-      width: 30px;
-      height: 30px; } }
+    footer .footerIcons {
+      padding: 0 10%;
+      justify-content: space-evenly; }
+      footer .footerIcons #footerLinkIcon {
+        width: 30px;
+        height: 30px; }
+    footer h6 {
+      font-size: 14px; }
+    footer .footerDev {
+      font-size: 10px; } }
 
 /* SMARTPHONE */
 @media (max-width: 480px) {
@@ -1279,23 +1300,24 @@ footer {
       font-size: 20px; }
     header #navFlex .menuItem {
       font-size: 12px; }
+  /*------NAV-----*/
   footer {
-    padding-top: 0;
     font-size: 8px;
     font-weight: bolder;
     grid-template-areas: "icons" "menus" "info" "dev"; }
-    footer h6 {
-      font-size: 12px; }
     footer .footerIcons {
       padding: 2%;
-      border-right: none;
-      border-bottom: solid 0.5px #247eb9; }
+      border-right: none; }
     footer #footerLinkIcon {
       width: 20px;
       height: 20px; }
     footer .footerMenu {
-      padding: 2%; }
+      padding: 1%;
+      justify-content: space-between; }
+      footer .footerMenu h6 {
+        font-size: 12px; }
     footer .footerInfo {
+      padding: 1% 0;
       text-align: center;
       font-size: 6px; }
     footer .footerDev {

@@ -144,8 +144,7 @@ footer {
   display: grid;
   grid-template-areas: 
   "icons menus menus"
-  "info info dev"
-;
+  "info info dev";
 
   background-color: $black;
 
@@ -227,6 +226,16 @@ footer {
     letter-spacing: .5px;
 
     grid-area: dev;
+
+    #devIcon{
+      margin: 5%;
+      width: 16px;
+      height: 16px;
+    }
+
+    #devIcon:hover{
+      color: $blue;
+    }
   }
 }
 
@@ -235,12 +244,26 @@ footer {
 @media (min-width: 481px) and (max-width: 1024px) {
 
   footer {
+    padding: 4% 0;
     font-size: 12px;
     font-weight: bolder;
 
-    #footerLinkIcon{
-      width: 30px;
-      height: 30px;
+    .footerIcons{
+      padding: 0 10%;
+      justify-content: space-evenly;
+
+      #footerLinkIcon{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    h6{
+      font-size: 14px;
+    }
+
+    .footerDev{
+      font-size: 10px;
     }
   }
 }
@@ -263,8 +286,9 @@ footer {
     }
   }
 
+  /*------NAV-----*/
+
   footer {
-    padding-top: 0;
     font-size: 8px;
     font-weight: bolder;
 
@@ -274,14 +298,9 @@ footer {
     "info"
     "dev";
 
-    h6{
-      font-size: 12px;
-    }
-
     .footerIcons{
       padding: 2%;
       border-right: none;
-      border-bottom: solid .5px $blue;
     }
 
     #footerLinkIcon{
@@ -290,10 +309,17 @@ footer {
     }
 
     .footerMenu{
-      padding: 2%;
+      padding: 1%;
+
+      justify-content: space-between;
+  
+      h6{
+        font-size: 12px;
+      }
     }
 
     .footerInfo{
+      padding: 1% 0;
       text-align: center;
       font-size: 6px;
     }
