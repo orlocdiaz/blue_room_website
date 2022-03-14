@@ -59,7 +59,7 @@ hr {
 /* NAV */
 
 header {
-  height: 10vh;
+  min-height: 10vh;
 
   display: flex;
   flex-flow: row wrap;
@@ -68,7 +68,7 @@ header {
   z-index: 2;
 
   #navFlex {
-    height: 10vh;
+    min-height: 10vh;
     width: 100%;
 
     /* background-image: url(../content/tex_wav.png); */
@@ -139,12 +139,12 @@ header {
 /* FOOTER */
 
 footer {
-  padding: 2% 0 2% 0;
+  padding: 2% 0 1% 0;
 
   display: grid;
-  grid-template-areas: 
-  "icons menus menus"
-  "info info dev";
+  grid-template-areas:
+    "icons menus menus"
+    "info info dev";
 
   background-color: $black;
 
@@ -155,44 +155,44 @@ footer {
   text-align: center;
   line-height: 1.5;
 
-  .footerIcons{
+  .footerIcons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-right: solid 1px $blue;
     grid-area: icons;
   }
-  .footerMenu{
+  .footerMenu {
     margin: 0 5%;
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-between;
     grid-area: menus;
 
-    ul{
+    ul {
       margin-bottom: 0;
       padding: 0;
       list-style-type: none;
       text-align: center;
 
-      li{
-        color: $blue
+      li {
+        color: $blue;
       }
     }
 
-    .footerFAQ{
+    .footerFAQ {
       @include footerList;
     }
 
-    .footerAbout{
+    .footerAbout {
       @include footerList;
     }
 
-    .footerJoin{
+    .footerJoin {
       @include footerList;
     }
   }
-  .footerInfo{
+  .footerInfo {
     padding-left: 5%;
     text-align: start;
     grid-area: info;
@@ -207,33 +207,37 @@ footer {
     text-decoration-color: $pink;
   }
 
-  #footerLinkIcon{
+  #footerLinkIcon {
     width: 40px;
     height: 40px;
   }
 
   #footerLinkIcon:hover {
-    transition: .5s;
+    transition: 0.5s;
     color: $blue;
   }
 
-  .footerDev{
-    padding-right: 1%;
+  .footerDev {
+    margin-right: 5%;
     display: flex;
+    text-align: end;
     justify-content: end;
     align-items: flex-end;
     font-size: 12px;
-    letter-spacing: .5px;
 
     grid-area: dev;
 
-    #devIcon{
+    a {
+      padding-left: 1px;
+    }
+
+    #devIcon {
       margin: 5%;
       width: 16px;
       height: 16px;
     }
 
-    #devIcon:hover{
+    #devIcon:hover {
       color: $blue;
     }
   }
@@ -242,27 +246,26 @@ footer {
 /* TABLET */
 
 @media (min-width: 481px) and (max-width: 1024px) {
-
   footer {
-    padding: 4% 0;
+    padding: 2% 0;
     font-size: 12px;
     font-weight: bolder;
 
-    .footerIcons{
+    .footerIcons {
       padding: 0 10%;
       justify-content: space-evenly;
 
-      #footerLinkIcon{
+      #footerLinkIcon {
         width: 30px;
         height: 30px;
       }
     }
 
-    h6{
+    h6 {
       font-size: 14px;
     }
 
-    .footerDev{
+    .footerDev {
       font-size: 10px;
     }
   }
@@ -292,47 +295,49 @@ footer {
     font-size: 8px;
     font-weight: bolder;
 
-    grid-template-areas: 
-    "icons"
-    "menus"
-    "info"
-    "dev";
+    grid-template-areas:
+      "icons"
+      "menus"
+      "info"
+      "dev";
 
-    .footerIcons{
+    .footerIcons {
       padding: 2%;
       border-right: none;
     }
 
-    #footerLinkIcon{
+    #footerLinkIcon {
       width: 20px;
       height: 20px;
     }
 
-    .footerMenu{
+    .footerMenu {
       padding: 1%;
 
       justify-content: space-between;
-  
-      h6{
+
+      h6 {
         font-size: 12px;
       }
     }
 
-    .footerInfo{
+    .footerInfo {
       padding: 1% 0;
       text-align: center;
       font-size: 6px;
     }
 
-    .footerDev{
+    .footerDev {
       justify-content: center;
       align-items: center;
       font-size: 6px;
 
-      #devIcon{
+      #devIcon {
         width: 8px;
         height: 8px;
       }
     }
   }
 }
+
+@import "faqCareers";

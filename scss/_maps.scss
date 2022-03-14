@@ -6,6 +6,7 @@ $headings: (
   pageTitle: 6vh,
   subtitle: 4vh,
   itemTitle: 3vh,
+  itemTitleB: 3vh,
 );
 
 @each $name-heading, $size in $headings {
@@ -20,6 +21,7 @@ $headings: (
   pageTitle: $pink,
   subtitle: $blue,
   itemTitle: $pink,
+  itemTitleB: $blue,
 );
 
 @each $name-heading, $h-color in $headings {
@@ -34,6 +36,7 @@ $headings: (
   pageTitle: $mainFont,
   subtitle: $mainFont,
   itemTitle: $mainFont,
+  itemTitleB: $mainFont,
 );
 
 @each $name-heading, $h-font in $headings {
@@ -57,6 +60,7 @@ $headings: (
   pageTitle: 1%,
   subtitle: 1%,
   itemTitle: 1% 0,
+  itemTitleB: 1% 0,
 );
 
 @each $name-heading, $h-margin in $headings {

@@ -15,15 +15,41 @@
 
     animation: teamAnim 1 1s ease;
 
-    @keyframes teamAnim{
+    @keyframes teamAnim {
       0% {
         transform: scale(0.5);
       }
     }
 
+    display: grid;
+    grid-template-areas:
+      "cla cla"
+      "syl mich"
+      "and tony";
+
+    #claDiv {
+      grid-area: cla;
+    }
+
+    #sylDiv {
+      grid-area: syl;
+    }
+
+    #michDiv {
+      grid-area: mich;
+    }
+
+    #andDiv {
+      grid-area: and;
+    }
+
+    #tonyDiv {
+      grid-area: tony;
+    }
+
     .accordion-item {
-      margin: 1% 0 2% 0;
-      align-self: center;
+      margin: 1% 1% 2% 1%;
+      min-width: 98%;
 
       background-color: $black;
       border: solid 2px $blue;
@@ -33,9 +59,13 @@
         margin: 0;
         background-color: $transparent;
 
+        #ceoImg {
+          width: 55%;
+        }
+
         .teamImg {
           margin: 2% 1%;
-          width: 55%;
+          width: 85%;
           height: auto;
 
           border-radius: 15px;
@@ -64,7 +94,7 @@
         margin: 0;
         padding-top: 0;
 
-        text-align: center;
+        text-align: justify;
 
         font-family: $secondaryFont;
         color: $blue;
@@ -77,18 +107,28 @@
 /* TABLET */
 
 @media (min-width: 481px) and (max-width: 1024px) {
-
   .team {
     .accordion {
+      grid-template-areas:
+        "cla"
+        "syl"
+        "mich"
+        "and"
+        "tony";
+
       .accordion-item {
         .accordion-button {
-          .teamImg{
+          #ceoImg {
+            width: 65%;
+          }
+
+          .teamImg {
             width: 65%;
             height: auto;
           }
         }
 
-        .accordion-body{
+        .accordion-body {
           font-size: 16px;
         }
       }
@@ -99,18 +139,28 @@
 /* SMARTPHONE */
 
 @media (max-width: 480px) {
-
   .team {
     .accordion {
+      grid-template-areas:
+        "cla"
+        "syl"
+        "mich"
+        "and"
+        "tony";
+
       .accordion-item {
         .accordion-button {
-          .teamImg{
+          #ceoImg {
+            width: 75%;
+          }
+
+          .teamImg {
             width: 75%;
             height: auto;
           }
         }
 
-        .accordion-body{
+        .accordion-body {
           font-size: 12px;
         }
       }
